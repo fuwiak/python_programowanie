@@ -1,4 +1,5 @@
 ```{python}
+
 name = "Adam        "
 names = ["Adam", "Kamil", "Dawid"]
 
@@ -87,6 +88,45 @@ hasla = {"pawel": "haslo_maslo",
 
 # slownik["key"]="wartosc"
 
-```
+
+lista = ['pawel',123,'jozef',666,'jaroslaw',8888,'user1']
+if len(lista)%2!=0:
+    lista = lista[:-1]
+
+keys = lista[::2]
+values = lista[1::2]
+slownik = {}
+for i in range(len(keys)):
+    slownik[keys[i]] = values[i]
+
+# print(slownik)
+
+#set - zbiorem - zestaw
+
+lista1 = [2,2,1,1,1,3]
+
+zbior = set(lista1)
+zbior1 = {}
+print("zbior ", set(lista1))
+
+set1 = set([1,2,3,4])
+set2 = set([3,4, 5, 6])
+# set1.union(set2) suma zbiorw
+# set1.difference(set2) set1 - set2
+# set2.difference(set1) set2 - set1
+#list(set2.difference(set1)) #zamiana roznicy dwoch zbiorw na liste
 
 
+
+# i = 0
+# while i <= len(lista):
+#     if i+1 < len(lista):
+#         slownik[lista[i]] = lista[i+1]
+#     i += 2
+
+
+#polaczyc liste, usunac duplikaty, oraz podac ile razy powtorzyl sie pawel w dwoch listach
+#resultat do slownika
+
+lista1 = ['pawel',123,'jozef',666,'jaroslaw',8888,'pawel',999, "jozef", 888, "janne": 2222]
+lista2 = ['pawel',123,'jozef',666,'krzaklewski',8888,'hans',999, "jozef", 888, "janne": 2222]
