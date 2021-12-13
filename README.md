@@ -148,6 +148,47 @@ print("losowe ip", ip)
 
 #stworzyc 100 IP: localhostow od 192 i 100 nielokalhostow - i zapisac do do listy
 
+import random
+
+
+
+
+
+
+#stworzyc 100 IP: localhostow od 192 i 100 nielokalhostow - i zapisac do do listy
+
+lista_ip_non_local = []
+for i in range(100):
+
+    ip=""
+    for i in range(0,4):
+            losowa_liczba = random.randint(1, 255)
+            ip+=str(losowa_liczba)
+            if i in range(0,3):
+                ip += "."
+    lista_ip_non_local.append(ip)
+
+# print(lista_ip_non_local)
+
+lista_ip_local = []
+for i in range(100):
+    ip="192.168."
+    for i in range(0,2):
+            losowa_liczba = random.randint(1, 255)
+            ip+=str(losowa_liczba)
+            if i in range(1):
+                ip += "."
+    lista_ip_local.append(ip)
+# print(lista_ip_local)
+
+#tworzymy haslo do kazdego z IP
+# od 65 do 125
+#wygenerowac liste 200 hasel 8 znakow
+
+lista_hasel = []
+for i in range(65, 125):
+    print(i, chr(i))
+```
 
 
 
