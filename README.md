@@ -130,3 +130,28 @@ set2 = set([3,4, 5, 6])
 
 lista1 = ['pawel',123,'jozef',666,'jaroslaw',8888,'pawel',999, "jozef", 888, "janne", 2222]
 lista2 = ['pawel',123,'jozef',666,'krzaklewski',8888,'hans',999, "jozef", 888, "janne", 2222]
+
+import random
+
+
+ip=""
+for i in range(16):
+    if i%4==0 and i!=0:
+        ip+="."
+    else:
+        losowa_cyfra = random.randint(0, 9)
+        ip+=str(losowa_cyfra)
+
+
+
+print("losowe ip", ip)
+
+#stworzyc 100 IP: localhostow od 192 i 100 nielokalhostow - i zapisac do do listy
+
+
+
+
+
+
+
+
