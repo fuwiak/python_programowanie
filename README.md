@@ -1,4 +1,4 @@
-
+```{python}
 name = "Adam        "
 names = ["Adam", "Kamil", "Dawid"]
 
@@ -87,6 +87,6 @@ hasla = {"pawel": "haslo_maslo",
 
 # slownik["key"]="wartosc"
 
-
+```
 
 
