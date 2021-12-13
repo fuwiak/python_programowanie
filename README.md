@@ -1,36 +1,3 @@
-# python_programowanie
-
-
-#zad1 
-
-
-```{python}
-imie = 'Adam'
-nazwisko = 'Malysz'
-
-print("Nazywam sie ",imie,nazwisko)
-```
-
-#zad2
-```{python}
-#od 0 do 5000 - malo zamozny, od 5000(wlacznie) do 10000(bez) - jestes sredniakiem
-#powyzej 10000(wlacznie) - jestes bogolem
-
-
-salary = 9000
-if salary>=0 and salary<5000:
-    print("malo zamozny")
-elif salary>=5000 and salary<8000:
-    print("sredniak")
-
-elif salary>=8000 and salary<10000:
-    print("sredniak plus")
-
-
-
-else:
-    print("jestes bogolem")
-
 
 name = "Adam        "
 names = ["Adam", "Kamil", "Dawid"]
@@ -89,6 +56,37 @@ print("suma nieparzystych", suma)
 comma_IP = "196,122,1,1"
 
 #wyciagnc z IP liczby parzyste, i podac ich sume
+comma_IP = "192,168,1,1"
+
+sortowanie = comma_IP.split(",")
+print(sortowanie)
+suma = 0
+for i in sortowanie:
+    if int(i)%2==0:
+        suma = suma+int(i)
+print(suma)
+
+lista1 = [2,1,37]
+krotka1 = (1,4,88)
+
+#key: value
+hasla = {"pawel": "haslo_maslo",
+         "kamil": "1234",
+         "ziutek": "twoja_stara_deska_do_krojenia"}
+
+# list(hasla.items()) wszystkie elementy
+
+# list(hasla.keys()) wszystkie klucze
+# list(hasla.values()) wszystkie wartosci
+
+#mam wczytana z pliku liste
+# lista = ["pawel", 123, "jozef", 666, "jaroslaw", 8888, "user1"]
+#zeby pobrac hasla czy loginy lista[::2]
+# [-1]
+#trzeba nie brac pod uwage "user1", poniewaz nie ma hasla
+
+# slownik["key"]="wartosc"
 
 
-```
+
+
