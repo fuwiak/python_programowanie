@@ -308,4 +308,17 @@ def show_arg(*x):
 # #
 # words = {"python": 2, "blah": 4, "alice": 3}
 # print(dict(sorted(words.items(), key=lambda x: x[0], reverse=True)))
+
+
+#napisac funkcje, ktora sprawdzi czy dane ip z listy to localhost, zalozmy ze takie od sekwencji 127  - napis[0:3]
+
+def czy_local(lista_ip):
+    for line in lista_ip:
+        if line[0:3]=="127":
+            print(line, "tak")
+        else:
+            print(line, "nie")
+
+
+lista = ["127.0.0.1", "192.168.136.83", "127.1.1.1", "888.222.111.1"]
 ```
