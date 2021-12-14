@@ -200,4 +200,14 @@ import json
 a_file = open("data.json", "w")
 json.dump(slownik, a_file)
 a_file.close()
-```
+
+
+with open('myfile.txt', 'w') as f: #write, 'r' - czytanie, 'a' - dodajemy linie do pliku
+    print(slownik, file=f)
+
+
+with open(r'plik.txt', 'w' ) as plik:
+    for klucz, wartosc in slownik.items():
+        wiersz = '{}={}\n'.format(klucz,wartosc)
+        plik.write(wiersz)
+      ```
