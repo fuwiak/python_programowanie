@@ -30,7 +30,12 @@ jumper = "Janne Ahonen na nastepnych zawodach Cie pokonam"
 # print(named)
 
 # comma_IP = "196,121,1,1"
-# comma_IP_without_commas = comma_IP.replace(",", ".")
+# colog = """111.222.333.123 HOME - [01/Feb/1998:01:08:39 -0800] "GET /bannerad/ad.htm HTTP/1.0" 200 198"""
+
+all_ip=re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",log)
+print("znalezione IP", all_ip.group())
+
+#napisac funkcje, ktora wyciaga z kazdej linii IP, uzywajac regexa wyzejmma_IP_without_commas = comma_IP.replace(",", ".")
 # print(comma_IP_without_commas)
 
 
@@ -584,4 +589,12 @@ hosty(24)
 #napisac funckje, ktora tworzy liste krotek gdzie (cidr, liczba_hostow)), mozna uzyc list comprehension
 
 # [(1, liczba), (2, liczba_hosto2)]
+
+
+log = """111.222.333.123 HOME - [01/Feb/1998:01:08:39 -0800] "GET /bannerad/ad.htm HTTP/1.0" 200 198"""
+
+all_ip=re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",log)
+print("znalezione IP", all_ip.group())
+
+#napisac funkcje, ktora wyciaga z kazdej linii IP, uzywajac regexa wyzej
 ```
