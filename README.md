@@ -647,5 +647,49 @@ print("posortowany slownik", dict(sorted(slownik.items(), key=lambda x: x[0])))
 #zadanie, sprawdzic z ktorej przegladarki najczesciej laczymy po https(rzekomo bezpieczniej)
 
 
+def podaj_mase1(masa, wzrost):
+    assert masa>0 and wzrost>0, "masa musi byc dodatnia"
+    return masa, wzrost
+
+def podaj_mase2(masa):
+    if not masa>0:
+        raise AssertionError("masa musi byc dodatnia")
+
+# masa = podaj_mase2(0)
+# try:
+#     #nasz caly kod, ktory ma byc niezawodny
+#     print(podaj_mase2(-9))
+# except Exception as e:
+#     #czynnosci, ktore wykonujemy w razie awarii
+#     print(e)
+
+
+# # #kod ktory wszelkie bledy
+# # try:
+# #
+# # except:
+#     pass
+
+lista = [2, 1, "pawel", 7, "lukasz"]
+
+try:
+
+    for x in lista:
+        print(x/2)
+except:
+    pass
+finally:
+    print("wszystkie elementy podzielone")
+
+# for x in lista:
+#     try:
+#         print(x / 2)
+#     except:
+#         print(x+" to lobuz")
+
+#kazda linia w logu ma miec nie wiecej niz 1000 znakow, jesli bedzie miala, prosze o komunikat zbyt dluga linia
+#jesli jest krotszza niz 1000 znakow, ma ja po prosyu wypisac
+
+
 
 ```
