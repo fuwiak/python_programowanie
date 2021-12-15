@@ -598,4 +598,17 @@ all_ip=re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",log)
 print("znalezione IP", all_ip.group())
 
 #napisac funkcje, ktora wyciaga z kazdej linii IP, uzywajac regexa wyzej
+result = []
+find_words1 = re.findall(r"\w+",logi)
+for word in find_words1:
+    if word.isdigit()!=True:
+        result.append(word)
+print(result)
+dlugosci=[]
+for i in result:
+    dlugosci.append(len(i))
+slownik=(collections.Counter(dlugosci))
+
+print("posortowany slownik", dict(sorted(slownik.items(), key=lambda x: x[0])))
+
 ```
