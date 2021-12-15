@@ -1,5 +1,5 @@
 ```
-poczta130@gmail.com
+mail poczta130@gmail.com
 
 name = "Adam        "
 names = ["Adam", "Kamil", "Dawid"]
