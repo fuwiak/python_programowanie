@@ -28,4 +28,4 @@ for maskval in maskvals:
 for maskval in maskvals:
     maska = '255.255.255.'+maskval
     hosty = host_count(maska)
-    print(' '*(15-len(maska)),maska,'=',hosty
+    print(' '*(15-len(maska)),maska,'=',hosty)
