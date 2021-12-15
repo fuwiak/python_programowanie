@@ -611,4 +611,41 @@ slownik=(collections.Counter(dlugosci))
 
 print("posortowany slownik", dict(sorted(slownik.items(), key=lambda x: x[0])))
 
+# logi1 = open("logi.txt").read()
+# logi2 = open("sample_log2.txt").read()
+
+# print("Ilosc POST w logu1: ",logi1.count("POST"))
+# print("Ilosc POST w logu2: ",logi2.count("POST"))
+
+# print("Ilosc GET w logu1: ",logi1.count("GET"))
+# print("Ilosc GET w logu2: ",logi2.count("GET"))
+
+
+
+
+# all_ip = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\w+|\d{2}/\w{3}/\d{4}", logi)
+
+# all_ip = re.findall(r"\d{2}/\w{3}/\d{4}", logi)
+# all_ip = re.findall(r"\[+( *?[0-9a-zA-Z\:\/] *?)+\s", logi)
+
+
+# all = len(set(all_ip))
+# print("liczba słów",all)
+# print(all_ip)
+# import collections
+#
+# print(collections.Counter(['a', 'b', 'c', 'a', 'b', 'b']))
+# print(collections.Counter({'a': 2, 'b': 3, 'c': 1}))
+# print(collections.Counter(a=2, b=3, c=1))
+
+
+#zrobic statystyke dlugosci slow
+#unique_words = set(all_ip)
+# for w in word:
+#     len()
+
+#zadanie, sprawdzic z ktorej przegladarki najczesciej laczymy po https(rzekomo bezpieczniej)
+
+
+
 ```
