@@ -69,6 +69,7 @@ class prostokat:
         return self.bok_a+other.bok_a, self.bok_b+other.bok_b
 
 
+
 p1 = prostokat(2,7)
 print(p1)
 
@@ -79,4 +80,45 @@ p3 = prostokat(8,9)
 print(p2)
 
 # prostokat.pole_prostokat2(7,8)
+
+#stwrorzyc klase wektor2d(x,y), dodowanie i odejmowanie wektorow __sub___
+
+
+class wektor2d:
+    #wlasciwosci
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return "Parametry wektora x:{}, y:{}".format(self.x, self.y)
+
+    def __add__(self, other):
+        return self.x+other.x, self.y+other.y
+
+    def __sub__(self, other):
+        return self.x-other.x, self.y-other.y
+
+    def __ne__(self, other):
+        return self.x == other.x, self.y == other.y
+
+    def __eq__(self, other):
+        if (self.x == other.x) and (self.y == other.y):
+            return "Są rowne"
+        else:
+            return "Nie są równe"
+
+
+w1 = wektor2d(-2,5)
+w2 = wektor2d(3,6)
+w3 = wektor2d(3,6)
+
+print("odejmowanie", w1-w2)
+print("dodawanie", w1+w2)
+
+
+#print(w1(21,37))---> (21,37)
+
+
+
 
