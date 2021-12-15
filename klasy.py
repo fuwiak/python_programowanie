@@ -41,3 +41,7 @@ print(uczen2.name)
 
 print(uczen1.show_full_name())
 print(uczen2.show_full_name())
+
+
+#stworzyc klase prostokat, ktory w inicie bedzie dwa parametry, dlugosci i szerokosc oraz metoda pole,
+# ktora wzraca pole prostokata, i na koncu stworzyc
