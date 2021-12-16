@@ -70,6 +70,12 @@ class IP:
             plik.write(ip+'\n')
         plik.close()
 
+    @staticmethod
+    def read_new_file(file_name):
+        dane = open(file_name, "r").readlines()
+        return dane
+
+
 adr1 = IP('adresy_prv.txt')
 
 print(adr1.genprv())
@@ -81,3 +87,8 @@ adr2 = IP('adresy_pub.txt')
 print(adr2.genpub())
 print(adr2.genpubs(10))
 adr2.zapisz()
+
+
+#czytanie nowego pliku
+
+new_data = adr2.read_new_file("plik.txt")

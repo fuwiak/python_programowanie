@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9873f09-7de8-4576-8cbc-cf051b3c8e13" name="Changes" comment="zmianu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/klasaIP.py" beforeDir="false" afterPath="$PROJECT_DIR$/klasaIP.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
