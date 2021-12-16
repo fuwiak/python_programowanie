@@ -100,7 +100,10 @@ class wektor2d:
         return self.x-other.x, self.y-other.y
 
     def __ne__(self, other):
-        return self.x == other.x, self.y == other.y
+        if (self.x!=other.x) or (self.y!=other.y):
+            return "Są różne"
+        else:
+            return "Sa równe"
 
     def __eq__(self, other):
         if (self.x == other.x) and (self.y == other.y):
