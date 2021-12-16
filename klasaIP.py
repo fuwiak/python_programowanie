@@ -104,7 +104,6 @@ class IP:
         '''
         self.ip_address = ip_address
         self.filename = filename
-        self.ipset = []
 
 
     def random_ip_nonlocal(self):
@@ -118,7 +117,7 @@ class IP:
                 if i in range(0, 3):
                     ip += "."
             lista_ip_non_local.append(ip)
-            return lista_ip_non_local
+        return lista_ip_non_local
 
 
     def random_ip_local(self):
@@ -131,7 +130,7 @@ class IP:
                 if i in range(1):
                     ip += "."
             lista_ip_local.append(ip)
-            return lista_ip_local
+        return lista_ip_local
 
 
     def zapisz(self):
