@@ -145,8 +145,11 @@ class IP:
             plik.write(ip+'\n')
         plik.close()
 
-
+    # p = IP(10, 'dupa.txt')
+    # p.read_new_file('plik.txt')
     @staticmethod
     def read_new_file(file_name):
         dane = open(file_name, "r").readlines()
         return dane
+
+    #walidacja
