@@ -4,6 +4,7 @@
     <list default="true" id="a9873f09-7de8-4576-8cbc-cf051b3c8e13" name="Changes" comment="zmianu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/klasaIP.py" beforeDir="false" afterPath="$PROJECT_DIR$/klasaIP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,22 +111,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="maska_podsieci" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_programowanie" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maska_podsieci.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -136,9 +134,6 @@
       <module name="python_programowanie" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -178,18 +173,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.klasy" />
-      <item itemvalue="Python.maska_podsieci" />
       <item itemvalue="Python.wyjatki" />
       <item itemvalue="Python.rest_api" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.klasaIP" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.klasaIP" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.rest_api" />
         <item itemvalue="Python.klasy" />
         <item itemvalue="Python.wyjatki" />
-        <item itemvalue="Python.maska_podsieci" />
       </list>
     </recent_temporary>
   </component>
@@ -204,8 +199,7 @@
       <workItem from="1639555643424" duration="46000" />
       <workItem from="1639558453622" duration="7000" />
       <workItem from="1639571144242" duration="8343000" />
-      <workItem from="1639638972161" duration="1284000" />
-      <workItem from="1639642628648" duration="2875000" />
+      <workItem from="1639638972161" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="zmianu">
       <created>1639572388804</created>
@@ -253,7 +247,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_programowanie$maska_podsieci.coverage" NAME="maska_podsieci Coverage Results" MODIFIED="1639571336141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_programowanie$klasy.coverage" NAME="klasy Coverage Results" MODIFIED="1639574007130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_programowanie$rest_api.coverage" NAME="rest_api Coverage Results" MODIFIED="1639644241284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_programowanie$wyjatki.coverage" NAME="wyjatki Coverage Results" MODIFIED="1639573837347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
