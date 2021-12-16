@@ -152,3 +152,15 @@ class IP:
         return dane
 
     #walidacja
+    @staticmethod
+    def file_validation(file_name):
+        dane = open(file_name, "r").readlines()
+        for line in dane:
+            temp = line.split('.')
+
+            if len(temp[0])>3 and temp[0][0].isdigit():
+
+                raise AssertionError("w pliku nie ma IP")
+        return "all_fine"
+
+    #napisac funkcj w klasie, ktora przyjumuje nazwe pliku oraz regex, i oddaje liste dopaswoan 
