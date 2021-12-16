@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9873f09-7de8-4576-8cbc-cf051b3c8e13" name="Changes" comment="zmianu">
-      <change afterPath="$PROJECT_DIR$/GH.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/klasaIP.py" beforeDir="false" afterPath="$PROJECT_DIR$/klasaIP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plik.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plik.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +199,7 @@
       <workItem from="1639558453622" duration="7000" />
       <workItem from="1639571144242" duration="8343000" />
       <workItem from="1639638972161" duration="1284000" />
-      <workItem from="1639642628648" duration="9424000" />
+      <workItem from="1639642628648" duration="10439000" />
     </task>
     <task id="LOCAL-00001" summary="zmianu">
       <created>1639572388804</created>

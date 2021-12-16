@@ -94,6 +94,8 @@ import random
 #
 # new_data = adr2.read_new_file("plik.txt")
 import random
+import re
+
 
 class IP:
     def __init__(self, ip_address, filename):
@@ -163,4 +165,16 @@ class IP:
                 raise AssertionError("w pliku nie ma IP")
         return "all_fine"
 
-    #napisac funkcj w klasie, ktora przyjumuje nazwe pliku oraz regex, i oddaje liste dopaswoan 
+    @staticmethod
+    def szukaj(file_name, pattern):
+        # dane = open(file_name, "r").readlines()
+        dane = open(file_name, "r").read()
+        findings = re.findall(pattern, dane)
+        # findings = re.findall(str(pattern), str(dane))
+        return findings
+
+regex = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+
+
+    #napisac funkcj w klasie, ktora przyjumuje nazwe pliku oraz regex, i oddaje liste dopaswoan
+    # re.findall()
