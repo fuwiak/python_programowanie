@@ -23,6 +23,7 @@ out = net_connect.send_command("ifconfig")
 
 from klasaIP import IP
 
+
 def analiza_logow(out, pattern):
     findings = re.findall(pattern, out)
 
@@ -37,10 +38,35 @@ regex1 = "(inet|inet6) \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
 
 regex7 = "inet \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} | inet6 "
 
+lista_do_sprawdzenia = analiza_logow(out, regex7)
 
-print(analiza_logow(out, regex7))
+lista_do_sprawdzenia = [x for x in lista_do_sprawdzenia if x!=' inet6 ']
+lista_do_sprawdzenia = [x.strip('inet ') for x in lista_do_sprawdzenia]
 
-#zmienic regex tak, by pobiewal IP po slowe inet
+
+
+def polacz(adresy_do_sprawdzenia):
+    for ip in adresy_do_sprawdzenia:
+        try:
+            net_connect = ConnectHandler(device_type='linux', host=ip,username='test', password='test', port='2222')
+            return ip, "dziala"
+        except Exception as blad:
+            print("ip: "+ip+" zglasza problem: ", blad)
+
+
+
+
+
+
+
+# napisac funckje, ktora bedzie sprawdzala z ktore ip i haslo daja sie zalogowac do systemu
+# na przypadek braku dostepu, niech funckja rzuci wyjatek, "access denied"
+
+# ip pobrac z analiza_logow(out, regex7), haslo niech bedzie stale, i sie rowna pawel;
+
+# device = ConnectHandler(device_type='linux', host='172.20.10.3', username='pawel', password='pawel')
+
+# zmienic regex tak, by pobiewal IP po slowe inet
 
 # linux_router_hidden = {
 #     'device_type': 'linux',
@@ -50,7 +76,6 @@ print(analiza_logow(out, regex7))
 # }
 #
 # net_connect_hidden = ConnectHandler(**linux_router_hidden)
-
 
 
 # out = device.send_command("ifconfig")
@@ -69,7 +94,6 @@ print(analiza_logow(out, regex7))
 # }
 
 
-
 # sshCli = ConnectHandler(
 #     device_type = 'cisco_ios',
 #     host = '192.168.1.1',
@@ -78,3 +102,4 @@ print(analiza_logow(out, regex7))
 #     password = 'cisco'
 #     )
 # # net_connect = ConnectHandler(**cisco_router)
+
