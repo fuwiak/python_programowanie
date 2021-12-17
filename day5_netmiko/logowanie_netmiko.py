@@ -2,18 +2,21 @@ from netmiko import ConnectHandler
 from getpass import getpass
 
 ##1 sposob logowania
-device = ConnectHandler(device_type='linux', host='172.20.10.3', username='pawel', password='pawel')
+# device = ConnectHandler(device_type='linux', host='172.20.10.3', username='pawel', password='pawel')
 
 ##2 sposob logowania - sprytniejszy
 
 linux_router = {
     'device_type': 'linux',
-    'host': '172.20.10.3',
+    'host': '192.168.43.197',
     'username': 'pawel',
     'password': 'pawel',
+
 }
 
 net_connect = ConnectHandler(**linux_router)
+
+out = net_connect.send_command("ifconfig")
 
 #kiedy nie chcemy pokazywac hasla
 
