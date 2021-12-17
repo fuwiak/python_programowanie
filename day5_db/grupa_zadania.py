@@ -53,6 +53,7 @@ print("Table created successfully in PostgreSQL ")
 
 mobilki=["LDŻ","Szajsung","Hujej","japko","alcatel"]
 
+
 # Executing a SQL query to insert data into  table
 i = 1
 for element in mobilki:
@@ -64,3 +65,9 @@ for element in mobilki:
     cursor.execute(insert_query, insert_v)
 connection.commit()
 
+
+#dopisac do tabeli mobile2 20 modeli telefonow, w taki sposb, zeby do kazdej nazwy po 3 cyfry
+# np LG1223 xiaomo 888
+
+#podpowiedz
+haslo = 'pawel.' + str(random.randint(0,255)) + '.' + str(random.randint(0,255))+ str(random.randint(0,255))
