@@ -1,6 +1,9 @@
 from netmiko import Netmiko
 import logging
 
+#wysylanie tych samych ustawien(zapisanych w pliku changes.txt) do wielu ruterow/OS/eetc
+
+
 linux_router1 = {
     'device_type': 'linux',
     'host': '192.168.43.197',

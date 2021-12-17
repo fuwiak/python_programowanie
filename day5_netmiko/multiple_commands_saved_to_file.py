@@ -7,6 +7,9 @@ from netmiko import (
 )
 
 
+#zapisywanie koment do pliku(nie calej sesji, jak w session.log)
+
+
 def send_show_command(device, commands):
     result = {}
     try:
