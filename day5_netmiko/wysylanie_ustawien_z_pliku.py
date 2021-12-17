@@ -1,13 +1,26 @@
 from netmiko import Netmiko
 import logging
 
-devices = [{
-   "device_type": "cisco_xe",
-   "ip": "ios-xe-mgmt-latest.cisco.com",
-   "username": "***",
-   "password": "***",
-   "port": "8181",
-}]
+linux_router1 = {
+    'device_type': 'linux',
+    'host': '192.168.43.197',
+    'username': 'pawel',
+    'password': 'pawel',
+
+}
+
+linux_router2 = {
+    'device_type': 'linux',
+    'host': '192.168.43.197',
+    'username': 'pawel',
+    'password': 'pawel',
+
+}
+
+
+
+
+devices = [linux_router1, linux_router2]
 
 for device in devices:
    net_connect = Netmiko(**device)

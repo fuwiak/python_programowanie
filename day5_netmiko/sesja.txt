@@ -1,0 +1,43 @@
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-91-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri 17 Dec 2021 01:59:35 PM UTC
+
+  System load:  0.0               Processes:               122
+  Usage of /:   50.1% of 8.79GB   Users logged in:         1
+  Memory usage: 11%               IPv4 address for enp0s3: 192.168.43.197
+  Swap usage:   0%
+
+
+51 updates can be applied immediately.
+7 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Fri Dec 17 13:57:47 2021 from 192.168.43.62
+********@********:~$ 
+********@********:~$ 
+********@********:~$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.43.197  netmask 255.255.255.0  broadcast 192.168.43.255
+        inet6 fe80::a00:27ff:fe88:86cc  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:88:86:cc  txqueuelen 1000  (Ethernet)
+        RX packets 2442  bytes 1049121 (1.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2404  bytes 350178 (350.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 104  bytes 8244 (8.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 104  bytes 8244 (8.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+********@********:~$ 
+********@********:~$ exit
