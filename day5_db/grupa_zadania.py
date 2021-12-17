@@ -55,9 +55,8 @@ mobilki=["LDŻ","Szajsung","Hujej","japko","alcatel"]
 
 
 # Executing a SQL query to insert data into  table
-i = 1
+i = 16
 for element in mobilki:
-    print(element);
     insert_query = """INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES (%s,%s,%s)"""
     insert_v = (i, element, random.randint(1000,5000))
     i += 1
@@ -70,4 +69,30 @@ connection.commit()
 # np LG1223 xiaomo 888
 
 #podpowiedz
-haslo = 'pawel.' + str(random.randint(0,255)) + '.' + str(random.randint(0,255))+ str(random.randint(0,255))
+#haslo = 'pawel.' + str(random.randint(0,255)) + '.' + str(random.randint(0,255))+ str(random.randint(0,255))
+
+
+#update bazy
+
+
+
+
+#zmienic ceny modeli od id=3 do id=6 i dac im cene 10000
+
+# update_query = """Update mobile2 set price = 1000 where id = 3"""
+#
+# #pod1
+# """Update mobile2 set price = 10000 where id = {}""".format(id)
+#
+#
+# cursor.execute(update_query)
+
+#pod2
+# for i in range(5):
+#     id, model, price = i, "xiaomi"+str(i), 1000+20*i
+#     insert_query = """ INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES ({}, {}, {})""".format(id, model, price)
+#     cursor.execute(insert_query)
+#     connection.commit()
+#
+# cursor.close()
+# connection.close()
