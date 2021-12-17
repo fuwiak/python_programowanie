@@ -1,4 +1,5 @@
 from netmiko import ConnectHandler
+import re
 from getpass import getpass
 
 ##1 sposob logowania
@@ -17,8 +18,23 @@ linux_router = {
 net_connect = ConnectHandler(**linux_router)
 
 out = net_connect.send_command("ifconfig")
+# print(out)
 
-#kiedy nie chcemy pokazywac hasla
+
+from klasaIP import IP
+
+def analiza_logow(out, pattern):
+    findings = re.findall(pattern, out)
+
+    return findings
+
+
+regex = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+
+
+print(analiza_logow(out, regex))
+
+#zmienic regex tak, by pobiewal IP po slowe inet
 
 # linux_router_hidden = {
 #     'device_type': 'linux',
