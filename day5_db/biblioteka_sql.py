@@ -48,7 +48,15 @@ def aktualizuj_rekord(id, nazwa_kolumny, nowa_wartosc, nazwa_tabeli):
 # aktualizuj_rekord(1, 'price', 9999999, 'mobile2')
 
 
+ # Executing a SQL query to delete table
 
+def usun_rekord(id, nazwa_tabeli):
+    cursor.execute("Delete from {} WHERE ID = {}".format(nazwa_tabeli,id))
+    connection.commit()
+    print("Usunieto wiersz nr {}".format(id))
+
+# usun_rekord(1, 'mobile2')
+# usun_rekord(5, 'mobile2')
 
 
 
