@@ -36,11 +36,15 @@ lista_ouput.append(result)
 #zapisac wynik z lista_output do plik txt, uzywajac funck, jako argument to nazwa do pliku do ktorej
 #bedziemy zapisywac output
 
-# with open('myfile.txt', 'w') as f: #write, 'r' - czytanie, 'a' - dodajemy linie do pliku
-#     print(slownik, file=f)
-#
-#
-# with open(r'plik.txt', 'w' ) as plik:
-#     for klucz, wartosc in slownik.items():
-#         wiersz = '{}={}\n'.format(klucz,wartosc)
-#         plik.write(wiersz)
+
+
+def save_log_to_file(file_name, lista_ouput):
+    for i in range(len(lista_ouput)):
+        with open(str(i)+file_name, 'w' ) as plik:
+            for klucz, wartosc in lista_ouput[i].items():
+                wiersz = '{}={}\n'.format(klucz,wartosc)
+                plik.write(wiersz)
+        print("zapisano do pliku {}".format(file_name+str(i)))
+
+
+save_log_to_file('log.txt', lista_ouput)
