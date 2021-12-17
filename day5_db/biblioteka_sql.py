@@ -39,11 +39,13 @@ create_table_query = '''CREATE TABLE mobile3
 # stworz_tabele(create_table_query)
 
 
-#jedna linia do aktulaizacji
-def wprowadz_nowy_rekord(id, nowa_wartosc, nazwa_tabeli):
-    pass
+def aktualizuj_rekord(id, nazwa_kolumny, nowa_wartosc, nazwa_tabeli):
+    cursor.execute("UPDATE {} SET {} = '{}' WHERE ID = {}".format(nazwa_tabeli,nazwa_kolumny,nowa_wartosc,id))
+    connection.commit()
+    print("Zaktualizowano wiersz nr{}".format(id))
 
 
+# aktualizuj_rekord(1, 'price', 9999999, 'mobile2')
 
 
 
