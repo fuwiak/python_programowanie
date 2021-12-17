@@ -29,10 +29,16 @@ def analiza_logow(out, pattern):
     return findings
 
 
-regex = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+# regex = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+
+regex1 = "(inet|inet6) \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+
+# regex6 = "((?:(inet|inet6)) \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"
+
+regex7 = "inet \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} | inet6 "
 
 
-print(analiza_logow(out, regex))
+print(analiza_logow(out, regex7))
 
 #zmienic regex tak, by pobiewal IP po slowe inet
 
