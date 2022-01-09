@@ -1,46 +1,4 @@
-# print(1)
-# print(2)
-# print(3)
-# print(4)
-# print(5)
-# print(6)
 
-
-# for i in range(1, 10):
-#     print("i = ", i)
-
-
-#wypisac kwadraty liczb od 1 do 10
-
-# for i in range(1, 11):
-#     print("kwadrat i =",i, " ", i**2)
-
-# for i in range(0, 30, 5):
-#     print("i = ", i)
-#
-# for i in range(1, 10, 0.1):
-#     print("i = ", i)
-
-# for i in range(5):
-#     print("lubie placic podatki ", i)
-
-# for i in range(0, 100, 20):
-#     print("drin nr ", i)
-
-# N = 11
-# i = 0
-# while(i<N):
-#     print(i)
-#     i = i+1
-
-#wypisac za pomoca petli while, liczby parzyste z zakresu 0, 100
-
-# a = 102
-# b = 0
-#
-# while(b<a):
-#     print(b)
-#     b = b+2
 imie = "Adam"
 nazwisko="Malysz"
 
