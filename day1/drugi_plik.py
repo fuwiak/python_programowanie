@@ -1,2 +1,0 @@
-
-print("janek ma psa")
