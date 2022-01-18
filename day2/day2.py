@@ -238,10 +238,10 @@ big_lista = [[1,2,3], [4,9,8], [9,1,2]]
 # print(big_lista[1][-1]) #ostatni elemnt drugiej listy
 
 
-gniazdo_list = [[1, [7,8,,9] 3], [2,3,4], [1,[8,1,2]]]
+# gniazdo_list = [[1, [7,8,,9] 3], [2,3,4], [1,[8,1,2]]]
 
 
-print(gniazdo_list[0][1][0]) #pobieramy pierwsza liste. nastepnie z wybranej listy pobieramy
+# print(gniazdo_list[0][1][0]) #pobieramy pierwsza liste. nastepnie z wybranej listy pobieramy
 #drugi element, a nastepnie pierwszy z brzegu
 
 #zeby dobrac do 8 [1,[8,1,2]] trzeba uzyc indeksu [2][1][0]
@@ -251,5 +251,21 @@ print(gniazdo_list[0][1][0]) #pobieramy pierwsza liste. nastepnie z wybranej lis
 #podac sume zagniezgdzonek listy: big_lista
 big_lista = [[1,2,3], [4,9,8], [9,1,2]]
 
+#1 sposob
+suma1 = 0
+for lista in big_lista:
+    temp_sum = sum(lista)
+    suma1+=temp_sum
 
 
+#sposob 2
+suma2 = 0
+for lista in big_lista:
+    temp_sum = 0
+    for element in lista: #sum w sposobie numer1
+        temp_sum+=element
+    suma2+=temp_sum
+
+
+print("suma", suma1)
+print("suma", suma2)
