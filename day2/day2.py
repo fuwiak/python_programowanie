@@ -60,13 +60,13 @@ lista2 = ['a', 'b', 'c', 1, 2, 3]
 import random
 
 
-lista_losowa = []
-
-for i in range(10): # dziesiec razy bedzie losowana liczba
-    losowa_liczba = random.randint(21, 37) #losowanie liczby
-    lista_losowa.append(losowa_liczba)
-
-print("losowa lista", lista_losowa)
+# lista_losowa = []
+#
+# for i in range(10): # dziesiec razy bedzie losowana liczba
+#     losowa_liczba = random.randint(21, 37) #losowanie liczby
+#     lista_losowa.append(losowa_liczba)
+#
+# print("losowa lista", lista_losowa)
 
 
 #lsoujmy 20 liczb z zakresu od 100 do 200, dodajmy te elementy do listy a nastepnie policzmy srednia
@@ -77,9 +77,119 @@ print("losowa lista", lista_losowa)
 # (104+106) / 2 = 105
 
 
+lista_losowa = []
+for i in range(20):                           # 20 razy losuje liczbę
+    losowa_liczba = random.randint(100, 200)  # losowanie liczby
+    lista_losowa.append(losowa_liczba)
+
+# print("losowa lista ", lista_losowa)
+# licznik = 0
+# suma = 0
+# for i in range(20):
+#     if lista_losowa[i]%2==0:
+#         suma+=lista_losowa[i]
+#         licznik+=1
+
+# for x in lista_losowa:
+#     if x%2==0:
+#         suma+=x
+#         licznik+=1
 
 
 
+
+# srednia=suma/licznik
+#
+# print("suma liczb parzystych =", suma)
+# print("srednia z liczb parzystych ", srednia)
+
+
+# for ind, element in enumerate(lista_losowa):
+#     print("index", ind, "element", element)
+
+#usuwanie elementu z listy
+
+# lista4 = [1,2,3,4]
+#
+# lista4.remove(4)
+# print(lista4)
+#
+# lista4.remove(3)
+# print(lista4)
+
+
+# lista4.remove(3)
+# print(lista4)
+
+# print(lista4.remove(1))
+
+#podmiana dowolnego elementu uzywajac indeksow
+lista5 = [9,2,7,8]
+
+# lista5[1]='aaa'
+#
+# print(lista5)
+#
+# lista5[-1]='bbb'
+#
+# print(lista5)
+
+
+#sprawdzenie czy dany element znajduje sie w liscie
+# szukany_element = 7
+#
+# for element in lista5:
+#     if szukany_element in lista5:
+#         print("znalezlismy szukany element")
+#         break
+#
+#
+
+
+
+
+#szkukamy liczb parzystych w zakresie 0, 100
+
+# a=0
+#
+# while(a<100):
+#     a+=1
+#     if a%2==1: #jesli liczba jest nieparzysta, to przeskocz ta sytuacje
+#         continue
+#     print(a)
+
+# listy vs stringi
+
+# napis = "Hello"
+# # napis[0]="XXXX" tak nie mozna podmnieniac elementow stringa
+# napis = list(napis) #zamieniamy string ma liste, by moc podmniec np pierwszy element napisu
+# napis[0]="XXXX" # modifikacja listy
+#
+# napis= "".join(napis) #powrot zmodyfikowanej listy do stringa
+
+
+lista6 = [1,2,3]
+lista7 = [4,5,6]
+
+# print(lista6+lista7) #sklejanie listy
+#
+# lista6.extend(lista7) #sklejanie listy(rozszerenie listy 6)
+# print(lista6)
+
+#zagniezdzanie petli
+
+# for x in lista6:
+#     for y in lista7: #zanim przeszkocznym do nastepnego elementu x, musza przejsc wszystkie y
+#         print(x*y,end=" ")
+#
+#
+# for kolumna in excel
+#     for wiersz in kolumna:
+#         print(wiersz)
+
+
+#wygerowac liste 20 liczb losowych, dodac je do listy, nastepnie podac indeksy liczb nieparzsych z tej listy
+#enumerate
 
 
 
