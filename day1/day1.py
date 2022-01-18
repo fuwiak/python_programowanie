@@ -1,692 +1,348 @@
-mail poczta130@gmail.com
-
-name = "Adam        "
-names = ["Adam", "Kamil", "Dawid"]
-
-liczby  = range(21, 40, 2)
-
-jumper = "Janne Ahonen na nastepnych zawodach Cie pokonam"
-# jumper[0:10]
-# jumper[0::2]
-
-# list(liczby)[2:-2] od elementu o indeksie 2 do indeksu -2(ale -2 nie bierzemy pod uwage)
-
-# names[0] pierwszy element
-# names[-1] ostatni element
-# names[-2] przedostatni element
-# list(liczby)[0::3] co trzeci element zaczynajac od indeksu zerowego
-# list(liczby)[1::3] co trzeci element zaczynajac od indeksu pierwszego
-
-
-# print(len(name))
-# name=name.strip()
-# print(name)
-# "Adam".strip("A") #sluzy do odcinanania na brzegach
-#replace = zamiana w dowolnym miejscu
-
-# "AJAX".strip("A")
-
-# named = name.replace("d", "x")
-# print(named)
-
-# comma_IP = "196,121,1,1"
-# colog = """111.222.333.123 HOME - [01/Feb/1998:01:08:39 -0800] "GET /bannerad/ad.htm HTTP/1.0" 200 198"""
-
-all_ip=re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",log)
-print("znalezione IP", all_ip.group())
-
-#napisac funkcje, ktora wyciaga z kazdej linii IP, uzywajac regexa wyzejmma_IP_without_commas = comma_IP.replace(",", ".")
-# print(comma_IP_without_commas)
-
-
-# print(comma_IP_without_commas.split("."))
-
-numbers_str = ["101", "200", "300", "400", "501"]
-# numbers_int = [100, 200, 300]
-
-suma = 0
-for digit in numbers_str:
-    suma = suma+int(digit) #suma=100, suma=300, suma=600
-# print("suma ", suma)
-# print("numbers str ", numbers_str)
-
-#suma liczb parzystych z numbers_str
-suma = 0
-for digit in numbers_str:
-    if int(digit)%2==1:
-        suma = suma+int(digit)
-
-print("suma nieparzystych", suma)
-
-
-comma_IP = "196,122,1,1"
-
-#wyciagnc z IP liczby parzyste, i podac ich sume
-comma_IP = "192,168,1,1"
-
-sortowanie = comma_IP.split(",")
-print(sortowanie)
-suma = 0
-for i in sortowanie:
-    if int(i)%2==0:
-        suma = suma+int(i)
-print(suma)
-
-lista1 = [2,1,37]
-krotka1 = (1,4,88)
-
-#key: value
-hasla = {"pawel": "haslo_maslo",
-         "kamil": "1234",
-         "ziutek": "twoja_stara_deska_do_krojenia"}
-
-# list(hasla.items()) wszystkie elementy
-
-# list(hasla.keys()) wszystkie klucze
-# list(hasla.values()) wszystkie wartosci
-
-#mam wczytana z pliku liste
-# lista = ["pawel", 123, "jozef", 666, "jaroslaw", 8888, "user1"]
-#zeby pobrac hasla czy loginy lista[::2]
-# [-1]
-#trzeba nie brac pod uwage "user1", poniewaz nie ma hasla
-
-# slownik["key"]="wartosc"
-
-
-lista = ['pawel',123,'jozef',666,'jaroslaw',8888,'user1']
-if len(lista)%2!=0:
-    lista = lista[:-1]
-
-keys = lista[::2]
-values = lista[1::2]
-slownik = {}
-for i in range(len(keys)):
-    slownik[keys[i]] = values[i]
-
-# print(slownik)
-
-#set - zbiorem - zestaw
-
-lista1 = [2,2,1,1,1,3]
-
-zbior = set(lista1)
-zbior1 = {}
-print("zbior ", set(lista1))
-
-set1 = set([1,2,3,4])
-set2 = set([3,4, 5, 6])
-# set1.union(set2) suma zbiorw
-# set1.difference(set2) set1 - set2
-# set2.difference(set1) set2 - set1
-#list(set2.difference(set1)) #zamiana roznicy dwoch zbiorw na liste
-
-
-
-# i = 0
-# while i <= len(lista):
-#     if i+1 < len(lista):
-#         slownik[lista[i]] = lista[i+1]
-#     i += 2
-
-
-#polaczyc liste, usunac duplikaty, oraz podac ile razy powtorzyl sie pawel w dwoch listach
-#resultat do slownika
-
-lista1 = ['pawel',123,'jozef',666,'jaroslaw',8888,'pawel',999, "jozef", 888, "janne", 2222]
-lista2 = ['pawel',123,'jozef',666,'krzaklewski',8888,'hans',999, "jozef", 888, "janne", 2222]
-
-import random
-
-
-ip=""
-for i in range(16):
-    if i%4==0 and i!=0:
-        ip+="."
-    else:
-        losowa_cyfra = random.randint(0, 9)
-        ip+=str(losowa_cyfra)
-
-
-
-
-
-print("losowe ip", ip)
-
-#stworzyc 100 IP: localhostow od 192 i 100 nielokalhostow - i zapisac do do listy
-
-
-
-
-
-
-
-import random
-
-iplist = []
-for private in range(100):
-    ip = '192.168.' + str(random.randint(0,255)) + '.' + str(random.randint(0,255))
-    iplist.append(ip)
-for public in range(100):
-    ip = ''
-    for i in range(4):
-        if i == 0:
-            ip = ip + str(random.randint(1,255))
-        else:
-            ip = ip + str(random.randint(0,255))
-        if i != 3:
-            ip = ip + '.'
-    iplist.append(ip)
-
-print('Adresy:', iplist)
-
-# Tworzymy 8-znakowe haslo do kazdego ip (chr od 65 do 125)
-
-passlist = []
-for passes in range(200):
-    passwd = ''
-    for i in range(8):
-        passwd += chr(random.randint(65,125))
-    passlist.append(passwd)
-
-print('Passla:', passlist)
-
-slownik = {}
-for i in range(len(iplist)):
-    slownik[iplist[i]] = passlist[i]
-
-print('Wszystko w slowniku:', slownik)
-
-
-
-#zapisywanie do pliku txt
-import json
-
-#zapis do pliku
-
-a_file = open("data.json", "w")
-json.dump(slownik, a_file)
-a_file.close()
-
-
-with open('myfile.txt', 'w') as f: #write, 'r' - czytanie, 'a' - dodajemy linie do pliku
-    print(slownik, file=f)
-
-
-with open(r'plik.txt', 'w' ) as plik:
-    for klucz, wartosc in slownik.items():
-        wiersz = '{}={}\n'.format(klucz,wartosc)
-        plik.write(wiersz)
-        
-        
-    
-
-
-def kwadrat(x): #x wejscie
-    return x**2 # return wyjscie
-
-# print(kwadrat(3))
-
-
-def suma_liczb(x,y):
-    return x+y
-
-print("suma liczb x,y=", suma_liczb(3,4))
-
-
-result = []
-for i in range(1, 11):
-    result.append(kwadrat(i))
-
-# print(result)
-
-#napisac funkcje, ktora odwraca podana liste, [1,2,0,7] ---> [7, 0, 2, 1], lista[::-1], list.sort(), sorted(list)
-# lista[::-1]
-
-def odwroc_liste(x):
-    return x[::-1], y, z
-
-lista = [1,6,1,2, 7, -9, -100, 21]
-
-# print("oryginalna lista", lista)
-# # print(odwroc_liste(lista))
+"""
+x = 4            # integer
+x1 = x + 4       # dodawanie
+x2 = x - 1       # odejmowanie
+x3 = x * 3       # mnożenie
+x4 = x / 2       # odejmowanie
+x += 2           # x = x + 2
+x -= 2           # x = x - 2
+x *= 3           # x = x * 3
+x /= 3           # x = x / 3
+x5 = x           # przypisanie zmiennych
+x6 = x % 4       # dzielenie modulo
+
+
+"""
+
+z = 3.14         # floating point
+z1 = z + 2.0     # dodawanie
+z2 = z - 2.0     # odejmowanie
+z3 = z / 3.0     # dzielenie
+z4 = z // 3.0    # dzielenie całkowite
+z += 2.0         # z = z + 2
+z -= 2.0         # z = z - 2
+z *= 3.0         # z = z * 3
+z /= 3.0         # z = z / 3
+z5 = z ** 2      # z^2
+z6 = z ** 0.5    # z^(1/2) == sqrt(z)
+z7 = pow(z,2)    # z^2
+z8 = round(z)    # zaokrąglenie do najbliższego integera
+z9 = int(z)
+
+
+#zad2 stworzyc zmienne, a, b,c i wypisac na ekran wartosci wyrazenia b do kwadratu odjac 4ac
+# zmienne a b c maja byc zmiennymi z przecinkiem
+#wypisac rezultat na ekran
+"""
+
+a = float(input("Podaj zmienna a "))
+b = float(input("Podaj zmienna b "))
+c = float(input("Podaj zmienna c "))
+d = b**2-4*a*c
+
+
+
+print("wartosc zmiennej d", d)
+
+"""
+
+# y1 = True
+# y2 = True
 #
-# print("sortowanie malejaco", sorted(lista, reverse=True))
-# print("sortowanie rosnaco", sorted(lista, reverse=False))
-# print(lista)
+# print("AND ", y1 and y2)       # logiczny AND
+# print("OR ", y1 or y2)        # logiczny OR
+# print("NOT ", y1 and not y2)   # logiczny NOT
 
-#napisac funkcje, ktora przyjmuje liste jako argument, i printuje originalna liste, potem posortowna rosnaco,
-#a nastepnie malejaco
 
-# def sorts(lista):
-#     return lista, sorted(lista, reverse=False), sorted(lista, reverse=True)
+import math
+
+
+# print("pierwiastek z dwoch", 2**0.5)
+# print("pierwiastek z dwoch", math.sqrt(2))
+
+# x = 4
+# print(math.sqrt(x))      # sqrt(4) = 2
+# print(math.pow(x,2))     # 4**2 = 16
+# print("exp", math.exp(x))       # exp(4) = 54.6
+# print("log", math.log(x))       # ln(x)
+# print(math.log(x,10))    # log_10(x)
+# print(math.fabs(-4))     # wartość bezwzględna
+# print(math.factorial(x)) # 4!
+
+#help(math) #dluzsza podpowiedz
+#dir(math) # bardzo lakoniczna
+
+
+# round(math.exp(x),2)
+
+x = 16
+
+# instrukcja warunkowa if
+
+# if x % 2 == 0: #jesli ten warunek jest prawdziwy(x%2==0)
+#     print("Liczba parzysta") #wtedy wykonuj to dzialanie
+# else: #jesli jednak warunek z if nie jest prawdziwy, to wykonaj to co znajduje sie po slowie else
+#     print("Liczba nieparzysta") #
+
+
+#zd3 uzywajac funkcji input, wprowadzic liczbe x do programu i jesli bedzie nieparzysta dac dac komunikat
+#nieparzysta liczba, w przeciwnym przypadku dac komunikat "nie szukalem takiej liczby:
+
+# x = int(input("podaj x "))
+# if x % 2 !=0:
+#     print("Liczba nieparzysta")
+# else:
+#     print("nie szukałem takiej liczby")
+
+a, b, c = 7, 1, 1
+# a=1
+# b=2
+# c=1
+# delta = b**2-4*a*c
 #
-# li = [1,2,0,7,5,1,8,2,9]
+# print("delta", delta)
+# if delta>0:
+#     print("2 rozwiazania")
+# elif delta==0:
+#     print("1 rozwiazanie")
+# elif delta==2:
+#     print("delta rowna 2")
+# else:
+#     print("Brak rozwiazan")
+
+
+#zad bmi
+ # waga = input()
+ # wzrost = input()
+
+
+# bmi=waga/wzrost**2
+
+# 16,0–16,99
+
+#na postawie danych z wikipedii, wypisywac komunikaty w stulu - wychudzony, otyly itd
+#zakresy bmi znajduja sie na wikipedii(link w czacie)
+
+# waga = float(input("Wpisz swoja wage"))
+# wzrost = float(input("Wpisz swoj wzrost w metrach"))
+# bmi = waga/wzrost**2
 #
-# lior, liasc, lides = sorts(li)
+# print("Twoje BMI wynosi", bmi, "Twoja kategoria bmi to:\n")
+# if bmi < 16:
+#     print("wyglodzenie")
+# elif bmi >= 16 and bmi <16.99:
+#     print("Wychudzenie")
+# elif bmi >= 17 and bmi < 18.49:
+#     print("Niedowaga")
+# elif bmi >= 18.5 and bmi <24.99:
+#     print("Pozadana masa ciala")
+# else:
+#     print("idz na silownie")
+
+
+
+
+# for i in range(1,11): #wypisz wsystkie liczby z zakresu od 1 do 11(ale juz 11 nie uwzgledniaj)
+#     print(i)
+
+
+
+# for i in range(6, 100, 6): #start 2, end = 100(bez 100), krok = 5
+    # print("Wartość iteratora to " + str(i))
+    # print("Wartość iteratora to ", i)
+    # print(i)
+
+# powtarzanie czynnosci
+
+path = "c;//pawel/logi/log"
+
+#log1, log2, log3, ... log100
+
+# for i in range(0,100):
+#     new_path = path+str(i)
 #
-# print('Original   =',lior)
-# print('Ascending  =',liasc)
-# print('Descending =',lides)
+#     print(new_path)
+
+#zad range(6, 100, 6): #start 2, end = 100(bez 100), krok = 5
+
+# korzystajac z wyzej wymienionej konstrukcji oraz petli for wypisac liczby z zakresu od 200 do 950(bez 950)
+# z krokiem co 4 elementy
 
 
-# lista =[3,5,6,7,9,34]
-# def lista_org(x):
-#     # print("oryginalna lista", x)
-#     # print("sortowanie malejąco", sorted(x, reverse=True))
-#     # print("sortowanie rosnąco", sorted(x, reverse=False))
-#     return x, sorted(x, reverse=True), sorted(x, reverse=False)
+# for i in range(200,950, 4):
+#     print("Wartość iteratora to " + str(i))
 
-
-# wynik = lista_org(lista)
-
-lista = [1,2,8,6,5,7,4]
-
-#dowolna liczba parametrow
-
-# def suma_liczb(*x):
-#     return sum(x)
-
-def show_arg(*x):
-    return x
-
-#napisz funckej, ktora ma jako argument *args, i podaje sume dla kazdej z micj, a = [2,1], b = [1,2,3], c = [3,4,5,2]
-
-# a, b, c = [2,1], [1,2,3], [3,4,5,2]
+# a = 200
 #
-# big_list = [a,b,c]
+# while(a<950):
+#     print(a)
+#     a+=4
+
+# moja_liczba = 9
 #
-# def suma_liczb(*x):
-#     return sum(x)
+# while(moja_liczba>0):
+#     print(moja_liczba)
+#     moja_liczba = int(input("Podaj liczbe "))
+
+a = 0
+
+# while(a<20):
+#     a+=1
+#     if a%2==0: #jesli liczba jest parzysta, to przeskocz ta sytuacje
+#         continue
+#     print(a)
+
+
+
+# while(a<20):
+#     a+=1
+#     if a%2==0: #jesli liczba jest parzysta, to koncz
+#         break
+#     print(a)
+
+
+#uzywajac petli while, wypisac kwadraty liczby 2, zakres od 1 do 1024
+
+# a = 200
 #
-# for lista in big_list:
-#     print(lista, suma_liczb(*lista))
+# while(a<950):
+#     print(a)
+#     a+=4
 
-
-#sortowanie
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[1])))
+# a=1
+# while (a<=1024):
+#     print(a)
+#     a=a*2
 #
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[0])))
+
+s1 = "Ala ma kota"
+
+# print(s1[1:]) # wypisujemy s1 od drugiego elementu(z indeksem numer1)
+
+# print(s1[1:4]) # wypisujemy s1 od drugiego elementu(z indeksem numer1) do czwartego
+
+# print(s1[-1]) #ostatni element
+
+# print(s1[-2]) #przedostatni element
+
+# print(s1[-3]) #3 od konca
+
+# print(s1[-3]+" "+s1[-7]) konretnie 2 symbole(index=-3, oraz index=-7)
+
+# print(s1[-3]) #3 od konca
+
+
+# print(s1[3:7])
+
+# print(s1[::-1]) #odwrocenie stringu
+
+
+#pobieranie co ktoregos elementu
+
+# print(s1[0::2]) #pobierz co drugi element, zaczynajac od indeksu 0
+
+# print(s1[1::3]) #pobierz co trzeci element, zaczynajac od indeksu 1
+
+#liczymy liczbe znakow w danym stringu
+# print("liczba spacji w s1", s1.count(" "))
+
+# print('liczba spacji w s1', s1.count(' '))
+
+# print("liczba liter a w s1", s1.count("a"))
+
+# print("liczba literek a w s1 bez wzgledu na wielkosc litery", s1.lower().count('a'))
+
+# print("liczba liter a w s1", s1.count("a")+s1.count("A"))
+
+
+# print("Wszystkie duze litery", s1.upper())
+
+
+#laczenie slow(stringow)
+# ala = ["Ala", "ma", "kota"]
+# print("+".join(ala)) #laczymy slowa w pudelku ala za pomoca znaku +
+
+#dzielenie stringa
+
+# podzielony_string = s1.split(" ") #podzielony string wg spacji
+
+# s2 = "Ala ma kota       "
+# s3 = "       Ala ma kota"
 #
-# #
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[0], reverse=True)))
+# s2.strip()#golenie z dwoch stron
+# s3.lstrip()#golenie z lewej strony
+# s2.rstrip()#golenie z prawej strony
 
-
-#napisac funkcje, ktora sprawdzi czy dane ip z listy to localhost, zalozmy ze takie od sekwencji 127  - napis[0:3]
-
-def czy_local(lista_ip):
-    for line in lista_ip:
-        if line[0:3]=="127":
-            print(line, "tak")
-        else:
-            print(line, "nie")
-
-
-lista = ["127.0.0.1", "192.168.136.83", "127.1.1.1", "888.222.111.1"]
+# s1.replace("A", "X")#podmiana litery A na litere X
 
 
 
+#dla zadanego stringu policzyc liczbe malych i duzych liter
+#string ma byc wprowadzany za pomoca funkcji input
+#"Ala ma Psa"
+#print("duzych liter jest", 2)
+#print("malych liter jest", 6)
 
-
-def kwadrat(x): #x wejscie
-    return x**2 # return wyjscie
-
-# print(kwadrat(3))
-
-
-def suma_liczb(x,y):
-    return x+y
-
-print("suma liczb x,y=", suma_liczb(3,4))
-
-
-result = []
-for i in range(1, 11):
-    result.append(kwadrat(i))
-
-# print(result)
-
-#napisac funkcje, ktora odwraca podana liste, [1,2,0,7] ---> [7, 0, 2, 1], lista[::-1], list.sort(), sorted(list)
-# lista[::-1]
-
-def odwroc_liste(x):
-    return x[::-1], y, z
-
-lista = [1,6,1,2, 7, -9, -100, 21]
-
-# print("oryginalna lista", lista)
-# # print(odwroc_liste(lista))
+# napis = "Ala ma psa"
+# licz_duze=0
+# for znak in napis:
+#     if znak==znak.upper():
+#         licz_duze+=1
 #
-# print("sortowanie malejaco", sorted(lista, reverse=True))
-# print("sortowanie rosnaco", sorted(lista, reverse=False))
-# print(lista)
+# print(licz_duze)
 
-#napisac funkcje, ktora przyjmuje liste jako argument, i printuje originalna liste, potem posortowna rosnaco,
-#a nastepnie malejaco
-
-# def sorts(lista):
-#     return lista, sorted(lista, reverse=False), sorted(lista, reverse=True)
+# wyraz = input("Wpisz wyraz")
+# liczba = len(wyraz)-wyraz.count(" ")
+# print("Ilość liter = ", liczba)
+# mala = 0
+# duza = 0
+# for znak in wyraz:
+#     if znak==znak.lower():
+#         mala+=1
+#     elif znak==znak.upper():
+#         duza+=1
 #
-# li = [1,2,0,7,5,1,8,2,9]
-#
-# lior, liasc, lides = sorts(li)
-#
-# print('Original   =',lior)
-# print('Ascending  =',liasc)
-# print('Descending =',lides)
+# mala = mala-wyraz.count(" ")
+# print("Ilość malych znakow = ", mala)
+# print("Ilość dużych znakow = ", duza)
 
+#listy
 
-# lista =[3,5,6,7,9,34]
-# def lista_org(x):
-#     # print("oryginalna lista", x)
-#     # print("sortowanie malejąco", sorted(x, reverse=True))
-#     # print("sortowanie rosnąco", sorted(x, reverse=False))
-#     return x, sorted(x, reverse=True), sorted(x, reverse=False)
+lista = [1, 5, 2, 4, 3]
 
+# print(lista[1:]) # pobieramy wszystko od elementu od indeksu nr 1
 
-# wynik = lista_org(lista)
+# print(lista[::-1]) #lista odwrotnie
 
-lista = [1,2,8,6,5,7,4]
+# print("suma listy", sum(lista))
+# print("max listy", max(lista))
+# print("min listy", min(lista))
 
-#dowolna liczba parametrow
+lista1 = ['a', 2,1, 9, 0] #sprawdze co z tymi ujemnymi
 
-# def suma_liczb(*x):
-#     return sum(x)
+# suma = 0
+# for liczba in lista1:
+#     if str(liczba).isdigit()==True: #jesli element listy jest cyfra, to dodaj
+#         print(liczba)
 
-def show_arg(*x):
-    return x
+# len(lista1) liczba elementow listy
 
-#napisz funckej, ktora ma jako argument *args, i podaje sume dla kazdej z micj, a = [2,1], b = [1,2,3], c = [3,4,5,2]
+# print("suma", suma)
 
-# a, b, c = [2,1], [1,2,3], [3,4,5,2]
-#
-# big_list = [a,b,c]
-#
-# def suma_liczb(*x):
-#     return sum(x)
-#
-# for lista in big_list:
-#     print(lista, suma_liczb(*lista))
+#dla zadanej listy, lista2 = ['a', 'b', 'c', 1,2,3]
+#policzyc srednia arytmetyczna danej listy nie uwzgledniajac liter
+#wynik ma wyniesc dwa, mozemy uzyc petli i licznikow
 
 
-#sortowanie
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[1])))
-#
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[0])))
-#
-# #
-# words = {"python": 2, "blah": 4, "alice": 3}
-# print(dict(sorted(words.items(), key=lambda x: x[0], reverse=True)))
+lista2 = ['a', 'b', 'c', 1, 2, 3]
 
-#napisac funkcje, ktora sprawdzi czy dane ip z listy to localhost, zalozmy ze takie od sekwencji 127  - napis[0:3]
+suma=0
+licznik=0
+for liczba in lista2:
+    if str(liczba).isdigit()==True: #jeśli element listy jest cyfrą, to dodaj, jest to równoznaczne z if str(liczba).isdigit()
+        suma = suma+liczba
+        licznik+=1
 
-# def czy_local(lista_ip):
-#     for line in lista_ip:
-#         if line[0:3]=="127":
-#             print(line, "tak")
-#         else:
-#             print(line, "nie")
-
-
-lista = ["127.0.0.1", "192.168.136.83", "127.1.1.1", "888.222.111.1"]
-
-
-# czy_local(lista)
-
-
-#uzywajac kodu z funkcji czy_lokal, sprawdzic w pliku plik.txt, ktory z ip jest lokalny badz nie
-#usun haslo z linii, i zastap je komunikatem tak lub nie
-
-
-
-# 127.0.0.1, "tak"
-# 192.168.136.83, "nie"
-
-dane = open("plik.txt", "r")
-dane_w_lista = dane.readlines()
-nowa_lista = []
-
-
-
-# for i in dane_w_lista:
-#     nowa_lista.append(i.split("=")[0])
-#
-#
-#
-# def fukcja_dla_ip(list_ip):
-#     for line in list_ip:
-#         if line[:3]=="127":
-#             print(line, "Tak")
-#         else:
-#             print(line, "nie")
-#
-# print(fukcja_dla_ip(nowa_lista))
-
-
-# def localhost(x):
-#     for i in x:
-#         if i[0:3] == "127":
-#             print (i,"jest localhostem")
-#         else:
-#             print(i,"nie jest localhostem")
-#
-# dane = open("plik.txt", "r")
-# dane_lista = dane.readlines()
-# nowa_lista2 = [i.rstrip('\n') for i in dane_lista]  # list comprehension?
-#
-# ipki=[]
-# for i in nowa_lista2:
-#     ipki.append(i.split(":")[0])
-#
-# localhost(ipki)
-
-dane = open("plik.txt","r")
-
-
-dane_lista = dane.readlines()
-nowa_lista=[]
-
-
-for i in dane_lista:
-    nowa_lista.append(i.split('=')[0])
-
-# nowa_lista = [i.strip('password') for i in dane_lista]
-
-nowa_lista = [i.split("=")[0] for i in dane_lista]
-
-def local_host(dane):
-    for line in dane:
-        if line[:3]=="127":
-            print(line, "Tak")
-        else:
-            print(line, "Nie")
-# print(local_host(nowa_lista))
-
-
-
-# lista = ["tak", "nie", "tak", "tak"]
-#
-# licznik = 0
-# for x in lista:
-#     if x=="tak":
-#         licznik+=1
-
-# lista.count("tak")
-
-
-
-#wyznaczyc statystyki pliku(mamy funkcje, w ktorej jako argument dajemy nazwe pliku), podac liczbe wszyskich ip, podac liczbe local, podac liczne non local, podac unikalnych ip(set),
-#podac procent elementow unikalny 150 / 200 = 75%
-# def localhost(x):
-#     jest=0
-#     niejest=0
-#     for i in x:
-#         if i[0:3] == "127":
-#             print (i,"jest localhostem")
-#             jest += 1
-#         else:
-#             print(i,"nie jest localhostem")
-#             niejest += 1
-#     print("localhost",jest)
-#     print("inne",niejest)
-#     uniq=len(set(x))
-#     all=len(x)
-#     print("procent unikalnych",round(uniq/all*100,2),"%")
-#
-# dane = open("plik_updated.txt", "r")
-# dane_lista = dane.readlines()
-# nowa_lista2 = [i.rstrip('\n') for i in dane_lista]
-#
-# ipki=[]
-# for i in nowa_lista2:
-#     ipki.append(i.split(":")[0])
-# localhost(ipki)
-
-
-def localhost(file_name):
-    dane = open(file_name, "r")
-    dane_lista = dane.readlines()
-    nowa_lista2 = [i.rstrip('\n') for i in dane_lista]  # list comprehension?
-    ipki = []
-    for i in nowa_lista2:
-        ipki.append(i.split("=")[0])  # dodaj tylko pierwszą kolumnę
-    # print(ipki)
-    jest=0
-    niejest=0
-    for i in ipki:
-        if i[0:3] == "127":
-            # print (i,"jest localhostem")
-            jest += 1
-        else:
-            # print(i,"nie jest localhostem")
-            niejest += 1
-    print("localhost",jest)
-    print("inne",niejest)
-    uniq=len(set(ipki))
-    all=len(ipki)
-    print("procent unikalnych",round(uniq/all*100,2),"%")
-
-# localhost("plik_updated.txt")
-# localhost("plik.txt")
-
-#podac liczbe hostow dla danego IP, ustalic sobie maske wg uznania,
-#def liczba_hosto(maska)
-#maska
-
-# IP = "127.168.91.121"
-#liczba hostow 256
-
-def hosty(prefix):
-    bity=32-prefix
-    print("liczba hostow:",2**bity-2)
-hosty(24)
-
-#napisac funckje, ktora tworzy liste krotek gdzie (cidr, liczba_hostow)), mozna uzyc list comprehension
-
-# [(1, liczba), (2, liczba_hosto2)]
-
-
-log = """111.222.333.123 HOME - [01/Feb/1998:01:08:39 -0800] "GET /bannerad/ad.htm HTTP/1.0" 200 198"""
-
-all_ip=re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}",log)
-print("znalezione IP", all_ip.group())
-
-#napisac funkcje, ktora wyciaga z kazdej linii IP, uzywajac regexa wyzej
-result = []
-find_words1 = re.findall(r"\w+",logi)
-for word in find_words1:
-    if word.isdigit()!=True:
-        result.append(word)
-print(result)
-dlugosci=[]
-for i in result:
-    dlugosci.append(len(i))
-slownik=(collections.Counter(dlugosci))
-
-print("posortowany slownik", dict(sorted(slownik.items(), key=lambda x: x[0])))
-
-# logi1 = open("logi.txt").read()
-# logi2 = open("sample_log2.txt").read()
-
-# print("Ilosc POST w logu1: ",logi1.count("POST"))
-# print("Ilosc POST w logu2: ",logi2.count("POST"))
-
-# print("Ilosc GET w logu1: ",logi1.count("GET"))
-# print("Ilosc GET w logu2: ",logi2.count("GET"))
-
-
-
-
-# all_ip = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\w+|\d{2}/\w{3}/\d{4}", logi)
-
-# all_ip = re.findall(r"\d{2}/\w{3}/\d{4}", logi)
-# all_ip = re.findall(r"\[+( *?[0-9a-zA-Z\:\/] *?)+\s", logi)
-
-
-# all = len(set(all_ip))
-# print("liczba słów",all)
-# print(all_ip)
-# import collections
-#
-# print(collections.Counter(['a', 'b', 'c', 'a', 'b', 'b']))
-# print(collections.Counter({'a': 2, 'b': 3, 'c': 1}))
-# print(collections.Counter(a=2, b=3, c=1))
-
-
-#zrobic statystyke dlugosci slow
-#unique_words = set(all_ip)
-# for w in word:
-#     len()
-
-#zadanie, sprawdzic z ktorej przegladarki najczesciej laczymy po https(rzekomo bezpieczniej)
-
-
-def podaj_mase1(masa, wzrost):
-    assert masa>0 and wzrost>0, "masa musi byc dodatnia"
-    return masa, wzrost
-
-def podaj_mase2(masa):
-    if not masa>0:
-        raise AssertionError("masa musi byc dodatnia")
-
-# masa = podaj_mase2(0)
-# try:
-#     #nasz caly kod, ktory ma byc niezawodny
-#     print(podaj_mase2(-9))
-# except Exception as e:
-#     #czynnosci, ktore wykonujemy w razie awarii
-#     print(e)
-
-
-# # #kod ktory wszelkie bledy
-# # try:
-# #
-# # except:
-#     pass
-
-lista = [2, 1, "pawel", 7, "lukasz"]
-
-try:
-
-    for x in lista:
-        print(x/2)
-except:
-    pass
-finally:
-    print("wszystkie elementy podzielone")
-
-# for x in lista:
-#     try:
-#         print(x / 2)
-#     except:
-#         print(x+" to lobuz")
-
-#kazda linia w logu ma miec nie wiecej niz 1000 znakow, jesli bedzie miala, prosze o komunikat zbyt dluga linia
-#jesli jest krotszza niz 1000 znakow, ma ja po prosyu wypisac
+print("średnia =", suma/licznik)
 
 
