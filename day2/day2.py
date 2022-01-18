@@ -305,6 +305,32 @@ dane3 = open(path, "r").readlines()
 
 #[188.168.91.121, AKAMdkPs, 8]
 
+data = open("plik.txt", "r").readlines() #wczytujemy plik do listy
+# print(data)
+
+# for linia in data:
+#     linia=linia.strip('\n')
+#
+#     linia=linia.split("=")
+#     linia2=[linia[0], linia[1], len(linia[1])]
+#     print(linia2)
+
+#zapisywanie danych do pliku
+
+lista = [3,3,3,3]
+
+#sposob 1
+# with open("new_file1.txt", "w") as f:
+#     print(lista, file=f)
+
+#sposob 2
+
+with open("new_file3.txt", "w") as f:
+    for element in lista:
+        f.write(str(element)+'\n') #kazdy element listy w nowym wierszu
+
+# poczta130@gmail.com
+
 
 
 
