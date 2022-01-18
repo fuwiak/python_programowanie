@@ -329,8 +329,33 @@ with open("new_file3.txt", "w") as f:
     for element in lista:
         f.write(str(element)+'\n') #kazdy element listy w nowym wierszu
 
-# poczta130@gmail.com
+
+#aktualizacja plik.txt
+#kazdego z hasel dodac od 3 do 5 nowych znakow
+#plik.txt ma byc zaktualizowany nowymi haslami
 
 
+#zamiana cyfry na znak 33-126
+#random.randint(65, 126)
 
+# print(chr(102))
+
+# "pawelsahbdhjs"+"x"+"y"+"z"
+
+path = "plik.txt"
+dane = open(path,"r").readlines()
+lista_ip = []
+lista_hasla = []
+linia2 = []
+for linia in dane:
+    linia = linia.strip("\n")
+    linia = linia.split("=")
+    linia2 = [linia[0], linia[1], len(linia[1])]
+    lista_ip.append(linia2[0])
+    lista_hasla.append(linia2[1])
+
+with open("new_file4.txt", "w") as f:
+    for haslo in lista_hasla:
+        string = random.randint(66,126)
+        f.write(str(haslo) + str(string))
 
