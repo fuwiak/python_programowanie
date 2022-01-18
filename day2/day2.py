@@ -296,7 +296,14 @@ path = "C:\\Users\\stasi\\Dropbox\\Komputer\\Downloads\\plik.txt"
 
 dane3 = open(path, "r").readlines()
 
+#zadanie bojowe
 
+#wczytac plik.txt do listy, nastepnie rozdzielic ip od hasla(split) i jednoczesnie podac komunikat
+#ile liter ma dane haslo(len(lista[9]), zeby wyczysci znak \n, uzyc konstrukcji strip('\n')
+#przyklad
+#188.168.91.121=AKAMdkPs
+
+#[188.168.91.121, AKAMdkPs, 8]
 
 
 
