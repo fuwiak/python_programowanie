@@ -220,14 +220,36 @@ for liczba in lista8:
 #nowy sposob
 
 only_pos2 = [x for x in lista8 if x>0]
-print(only_pos2)
+# print(only_pos2)
 
 
 #uzywajac list comprehension, zostac w liscie8 tylko liczby parzyste
 
+lista8 = [x for x in lista8 if x%2==0]
+
+# print(lista8)
+
+#zagniedzone listy, list of list
+
+big_lista = [[1,2,3], [4,9,8], [9,1,2]]
+
+# print(big_lista[0][-1]) #ostatni elemnt pierwszej listy
+#
+# print(big_lista[1][-1]) #ostatni elemnt drugiej listy
 
 
+gniazdo_list = [[1, [7,8,,9] 3], [2,3,4], [1,[8,1,2]]]
 
+
+print(gniazdo_list[0][1][0]) #pobieramy pierwsza liste. nastepnie z wybranej listy pobieramy
+#drugi element, a nastepnie pierwszy z brzegu
+
+#zeby dobrac do 8 [1,[8,1,2]] trzeba uzyc indeksu [2][1][0]
+
+
+#zadanko zagniezdzone listy, uzywaja zagniezdzonej petli for lub list comprehension
+#podac sume zagniezgdzonek listy: big_lista
+big_lista = [[1,2,3], [4,9,8], [9,1,2]]
 
 
 
