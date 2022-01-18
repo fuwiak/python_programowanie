@@ -457,21 +457,58 @@ print("roznica dwoch dwoch zbiorow B-A", B.difference(A))
 # lista_losowa = [random.randint(0, 1000) for i in range(20)]
 # print(lista_losowa)
 
-lista1 = [random.randint(10,20) for i in range(20)]
-lista2 = [random.randint(10,20) for i in range(20)]
+# lista1 = [random.randint(10,20) for i in range(20)]
+# lista2 = [random.randint(10,20) for i in range(20)]
+#
+# l1 = set(lista1)
+# l2 = set(lista2)
+#
+# print("l1",l1)
+# print("l2", l2)
+#
+# print("Suma dwoch zbiorów", l1.union(l2))
+# print("Czesc wspólna", l1.intersection(l2))
+# print("Roznica l1-l2", l1.difference(l2))
+# print("Roznica l2-l1", l2.difference(l1))
+# print("Różnica dwóch zbiorów B-A", l2.symmetric_difference(l1))
+# print("Różnica dwóch zbiorów A-B", l1.symmetric_difference(l2))
 
-l1 = set(lista1)
-l2 = set(lista2)
 
-print("l1",l1)
-print("l2", l2)
+#sortowanie
+#1 sposob
+lista9 = [9,-1,0,7,88]
 
-print("Suma dwoch zbiorów", l1.union(l2))
-print("Czesc wspólna", l1.intersection(l2))
-print("Roznica l1-l2", l1.difference(l2))
-print("Roznica l2-l1", l2.difference(l1))
-print("Różnica dwóch zbiorów B-A", l2.symmetric_difference(l1))
-print("Różnica dwóch zbiorów A-B", l1.symmetric_difference(l2))
+# lista9.sort()
+# lista9 = lista9[::-1] #lista9 posortowana malejaco
+#
+# print(lista9)
+
+#2 sposob
+# print("Sortowanie za pomoca funkcji ze zbioru", sorted(lista9, reverse=True))
+
+
+#sortowanie slownikow
+
+
+words = {"python": 2, "blah": 4, "alice": 3}
+
+
+
+print("Sortowanie slownika po wartosciach", dict(sorted(words.items(), key=lambda x: x[1])))
+
+print("Sortowanie slownika po kluczac", dict(sorted(words.items(), key=lambda x: x[0])))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
