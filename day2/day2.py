@@ -249,23 +249,55 @@ big_lista = [[1,2,3], [4,9,8], [9,1,2]]
 
 #zadanko zagniezdzone listy, uzywaja zagniezdzonej petli for lub list comprehension
 #podac sume zagniezgdzonek listy: big_lista
-big_lista = [[1,2,3], [4,9,8], [9,1,2]]
+# big_lista = [[1,2,3], [4,9,8], [9,1,2]]
+#
+# #1 sposob
+# suma1 = 0
+# for lista in big_lista:
+#     temp_sum = sum(lista)
+#     suma1+=temp_sum
+#
+#
+# #sposob 2
+# suma2 = 0
+# for lista in big_lista:
+#     temp_sum = 0
+#     for element in lista: #sum w sposobie numer1
+#         temp_sum+=element
+#     suma2+=temp_sum
+#
+#
+# print("suma", suma1)
+# print("suma", suma2)
 
-#1 sposob
-suma1 = 0
-for lista in big_lista:
-    temp_sum = sum(lista)
-    suma1+=temp_sum
+# zerkniesz na to: ?
+# big_lista = [[1,2,3], [4,9,8], [9,1,2]]
+#
+# suma =0
+# for lista in big_lista:
+#     temp_sum=0
+#     temp_sum=sum(lista)
+#     suma+=temp_sum
+# print(suma)
 
 
-#sposob 2
-suma2 = 0
-for lista in big_lista:
-    temp_sum = 0
-    for element in lista: #sum w sposobie numer1
-        temp_sum+=element
-    suma2+=temp_sum
+#praca z plikami
+
+#wersja - czytamy w ktorym jednoczesnie znajduje sie nasz kod
+
+# dane1 = open("plik.txt", "r").readlines() #wczytujemy plik do listy
+# # print(dane1)
+#
+# dane2 = open("plik.txt", "r").read() # wczytujemy plik do stringa
+# # print(dane2)
+
+#ostroznie z sciezkami bezwglednymi, czasami nalezy dopisac \\
+path = "C:\\Users\\stasi\\Dropbox\\Komputer\\Downloads\\plik.txt"
+
+dane3 = open(path, "r").readlines()
 
 
-print("suma", suma1)
-print("suma", suma2)
+
+
+
+
