@@ -342,20 +342,170 @@ with open("new_file3.txt", "w") as f:
 
 # "pawelsahbdhjs"+"x"+"y"+"z"
 
-path = "plik.txt"
-dane = open(path,"r").readlines()
-lista_ip = []
-lista_hasla = []
-linia2 = []
-for linia in dane:
-    linia = linia.strip("\n")
-    linia = linia.split("=")
-    linia2 = [linia[0], linia[1], len(linia[1])]
-    lista_ip.append(linia2[0])
-    lista_hasla.append(linia2[1])
+# path = "plik.txt"
+# dane = open(path,"r").readlines()
+# lista_ip = []
+# lista_hasla = []
+# linia2 = []
+# for linia in dane:
+#     linia = linia.strip("\n")
+#     linia = linia.split("=")
+#     linia2 = [linia[0], linia[1], len(linia[1])]
+#     lista_ip.append(linia2[0])
+#     lista_hasla.append(linia2[1])
+#
+# with open("nowe_hasla.txt", "w") as f:
+#     for haslo in lista_hasla:
+#         liczba_dodanych = random.randint(3,5)
+#         for i in range(liczba_dodanych):
+#             string = chr(random.randint(66,126))
+#             haslo=haslo+string
+#         f.write(str(haslo)+"\n")
 
-with open("new_file4.txt", "w") as f:
-    for haslo in lista_hasla:
-        string = random.randint(66,126)
-        f.write(str(haslo) + str(string))
+# for linia in data:
+#     extra_znaki=""
+#     linia=linia.strip('\n')
+#     linia=linia.split("=")
+#     n=random.randint(3, 5)
+#     for i in range(n):
+#         extra_znaki+=(chr(random.randint(65,126)))
+#     linia2=[linia[0], linia[1]+extra_znaki]
+#     print(linia2)
 
+
+#krotki
+
+a = [1,4,5]
+b = (1,5,8)
+
+#zamiana tupli na liste
+
+b = list(b)
+
+#zamian listy na tuple
+
+b = tuple(b)
+#slowniki
+
+miasta = {}                     # nowy słownik
+# miasta['id'] = {name, surname, salary}
+miasta['WAR'] = "Warszawa" #klucz, wartosc
+miasta['KRA'] = "Kraków"
+miasta['WRO'] = "Wrocław"
+miasta["RAD"] = "Radom"
+miasta["XYZ"] = "Sosnowiec", "Grojec"
+miasta[123]="Polska"
+
+miasta[(1236)]="Germany"
+
+
+
+
+# print("Wszystkie skroty", miasta.keys())
+# print("Wszystkie miasta", miasta.values())
+# print("Slownik do listy krotek", miasta.items())
+#
+# print("Wszystkie skroty", list(miasta.keys()))
+# print("Wszystkie miasta", list(miasta.values()))
+# print("Slownik do listy krotek", list(miasta.items()))
+
+
+# miasta["XYZ"]="Posen" modyfikacja wartosi pod kluczem XYZ
+
+lista = ['pawel',123,'jozef',666,'jaroslaw',8888,'user1'] #klucz, wartosc, klucz, wartosc, klucz, wartosc
+
+#zamienic liste na slownik, co drugi element z listy pobieramy za pomoca lista[::2], lista[1::2]
+#lista = lista[:-1] lista bez ostatniego elementu
+
+lista = lista[:-1]
+klucze = lista[::2]
+wartosci = lista[1::2]
+
+slownik = {}
+
+for i in range(len(klucze)):
+    slownik[klucze[i]]=wartosci[i]
+
+
+#zbiory(zestawy, set)
+
+# A = {1:1,2:2,3:3}
+# slownik = {}
+
+
+lista = [2,2,3,5,2]
+
+zbiorA = set(lista) #jesli chcesz miec unikalne wartosci w danej kolekcji, uzyj zbioru(setu)
+
+A = {1,2,3,4}
+B = {3,4,5,6}
+
+A = set(lista)
+
+print("suma dwoch zbiorow", A.union(B))
+print("czesc wspolna dwoch zbiorow", A.intersection(B))
+print("roznica dwoch dwoch zbiorow A-B", A.difference(B))
+print("roznica dwoch dwoch zbiorow B-A", B.difference(A))
+
+
+# slownik["klucz"]="wartosc"
+
+
+#wygenerowac dwie listy po 20 elementow(losowo), a zakres od 10 do 20, za pomoca setu wziac z jednej i drugie unikalne wartosci,
+#i pdac sumie, czesc, i roznice symetryczna pomiedzy zbiorami, A-B, B-A
+
+# lista_losowa = [random.randint(0, 1000) for i in range(20)]
+# print(lista_losowa)
+
+lista1 = [random.randint(10,20) for i in range(20)]
+lista2 = [random.randint(10,20) for i in range(20)]
+
+l1 = set(lista1)
+l2 = set(lista2)
+
+print("l1",l1)
+print("l2", l2)
+
+print("Suma dwoch zbiorów", l1.union(l2))
+print("Czesc wspólna", l1.intersection(l2))
+print("Roznica l1-l2", l1.difference(l2))
+print("Roznica l2-l1", l2.difference(l1))
+print("Różnica dwóch zbiorów B-A", l2.symmetric_difference(l1))
+print("Różnica dwóch zbiorów A-B", l1.symmetric_difference(l2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+# #chce pobrac pierwszy elemt items
+# dane=open("plik.txt", "r").readlines()
+# lista_ip=[]
+# lista_hasla=[]
+# linia2 =[]
+# for linia in dane:
+#     linia = linia.strip("\n")
+#     linia = linia.split("=")
+#     linia2 = [linia[0], linia[1], len(linia[1])]
+#     lista_ip.append(linia2[0])
+#     lista_hasla.append(linia2[1])
+#
+# with open("nowe_hasla.txt", "w") as f:
+#     for haslo in lista_hasla:
+#         liczba_dodanych=random.randint(3,5)
+#         for i in range(liczba_dodanych):
+#             string = chr(random.randint(33,126))
+#             haslo=haslo+string
+#
+#             string = ""
+#         print(haslo)
