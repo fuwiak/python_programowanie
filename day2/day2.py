@@ -191,6 +191,40 @@ lista7 = [4,5,6]
 #wygerowac liste 20 liczb losowych, dodac je do listy, nastepnie podac indeksy liczb nieparzsych z tej listy
 #enumerate
 
+# lista_losowa = []
+# for i in range(20):                           # 20 razy losuje liczbę
+#     losowa_liczba = random.randint(0, 1000)  # losowanie liczby
+#     lista_losowa.append(losowa_liczba)
+#
+# for ind, element in enumerate(lista_losowa):
+#     if element % 2 == 1:
+#        print ("index", ind, "element", element)
+
+
+#listy skladane(list comprehensions)
+
+# lista_losowa = [random.randint(0, 1000) for i in range(20)]
+# print(lista_losowa)
+
+#filtrowanie listy
+
+lista8 = [-1,0,-8,99,100, -8, 77] #podac z danej lsity tylko liczby dodatnie
+only_pos  = []
+
+for liczba in lista8:
+    if liczba>0:
+        only_pos.append(liczba)
+
+# print(only_pos)
+
+#nowy sposob
+
+only_pos2 = [x for x in lista8 if x>0]
+print(only_pos2)
+
+
+#uzywajac list comprehension, zostac w liscie8 tylko liczby parzyste
+
 
 
 
