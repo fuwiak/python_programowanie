@@ -185,6 +185,37 @@ dane_logi = open(path, "r").readlines()
 #rezulata zapisac do nowej listy
 
 
+#pobrac z każdej linii IP, oraz słowo HOME/AWAY, można rozdzielić elementy za pomoca funkcji split
+#rezultat zapisać do nowej listy
+dane_po_obrobce=[]
+for linia in dane_logi:
+    linia=linia.strip("\n")
+    linia=linia.split(" ")
+    # print(linia)
+    linia2=(linia[0]+" "+linia[1])
+    # print(linia2)
+    dane_po_obrobce.append(linia2)
+
+print_new_line(dane_po_obrobce)
+
+
+separate_ip_network = [linia.split(" ") for linia in dane_po_obrobce]
+
+
+nazwy_kolumn = ["ID1", "ID2"]
+wartosci = separate_ip_network
+def add_row(nazwy_kolumn,wartosci):
+    wiersz_baza_danych2 = {}
+    for ind, col in enumerate(nazwy_kolumn):
+        wiersz_baza_danych2[col] = wartosci[ind]
+    return wiersz_baza_danych2
+
+#zadanie bojowe, wyciagnac takie dane jak: data w formacie rok/miesiac/dziem oraz slowo get
+#rezulat zapisac do slownika
+
+
+
+
 
 
 
