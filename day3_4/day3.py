@@ -207,4 +207,48 @@ for i in range(10):
     row = add_row(nazwy_kolumn,wartosci)
     baza_danych.append(row)
 
-print(baza_danych)
+# print(baza_danych)
+
+
+#pokazywanie rezulatu funkcji, pobierajac "x" od uzytkownika
+
+# def foo(x):
+#     return 2*x
+#
+# x = int(input("Podaj liczbe"))
+#
+# foo(x)
+
+
+#lista vs krotka vs zbior vs slownik
+lista = [1,2,3,4]
+krotka = (1,2,3,4)
+zbior = {1,2,3,4}
+slownik = {"ip":1, "passw":2,"xyz": 3, "abc":4}
+
+
+#uzywam funkcji print_new_line z pliku biblioteka
+
+from biblioteka import print_new_line
+
+print_new_line(lista)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
