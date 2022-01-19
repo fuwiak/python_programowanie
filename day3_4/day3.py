@@ -121,6 +121,33 @@ def maks3(a,b,c):
     return maxi
 
 
+#mozna nieokreslona na poczatku liczbe parametrow
+
+
+def suma_elemntow(*x): #przyjmij nieskonczona liczbe parametrow
+    return sum(*x) # odpakuj elementy z listy i je zsumuj
+
+
+# suma_elemntow([1,2])
+
+def pokaz_argumenty(*x):
+    return x #zwroc argumenty, ktore zostaly podane
+
+# pokaz_argumenty(9,1,2)
+
+def proste_statystyki(*liczby):
+    maxi = max(liczby)
+    mini = min(liczby)
+    suma = sum(liczby)
+    srednia = suma/len(liczby)
+    return maxi, mini, suma, srednia
+
+#zadanie bojowe, przerobic funkcje proste statystki, zeby wzracala slownik
+#klucze: max, min, suma, srednia
+#slownik["max"]
+
+
+
 
 
 
