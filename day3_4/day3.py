@@ -122,9 +122,65 @@ from biblioteka import print_new_line, proste_statystyki1, proste_statystyki2
 #a nasteonie wydrukowac ich rezulaty dla listy = [1,2,3,4]
 
 
-lista = [1,2,3,4]
-print(proste_statystyki1(lista))
-print(proste_statystyki2(lista))
+# lista = [1,2,3,4]
+# print(proste_statystyki1(lista))
+# print(proste_statystyki2(lista))
+
+
+#sposoby podawania danych do funkcji
+
+
+def foo1(*x): #podajemy dane po przecinku
+    """
+    esli chcesz podac po prostu do funkcji liczb przedzielajac je przecinkiem
+    zrob nastepujaco foo1(1,2,3)
+    """
+    return x
+# foo1(1,2,3)
+
+def foo2(x):
+    """
+       esli chcesz podac [liste] lub (krotke) o zrob nastepujaco
+       foo2([1,2,3])
+       foo2((1,2,3))
+
+    """
+    return x
+
+# foo2([1,2,3])
+
+def foo3(**x):
+    """
+    jesli chcesz przekazac slownik, zrob nastepujaco
+    #1 sposob
+    slownik = {"pawel":1, "maja":2}
+    foo3(**slownik)
+    #2 sposob
+    foo3(pawel=1, maja=2, kamil=3)
+
+    """
+
+
+
+    return x
+
+#sposob1
+slownik = {"pawel":1, "maja":2}
+
+#sposob2
+# foo3(pawel=1, maja=2, kamil=3)
+
+
+foo3(**slownik)
+
+
+
+
+
+
+
+
+
 
 
 
