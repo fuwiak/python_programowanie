@@ -202,7 +202,7 @@ print_new_line(dane_po_obrobce)
 separate_ip_network = [linia.split(" ") for linia in dane_po_obrobce]
 
 
-nazwy_kolumn = ["ID1", "ID2"]
+nazwy_kolumn = ["row1", "row2"]
 wartosci = separate_ip_network
 def add_row(nazwy_kolumn,wartosci):
     wiersz_baza_danych2 = {}
@@ -210,16 +210,12 @@ def add_row(nazwy_kolumn,wartosci):
         wiersz_baza_danych2[col] = wartosci[ind]
     return wiersz_baza_danych2
 
-#zadanie bojowe, wyciagnac takie dane jak: data w formacie rok/miesiac/dziem oraz slowo get
+#zadanie bojowe, wyciagnac takie dane jak: data w formacie dzien/miesiac/rok oraz slowo get
 #rezulat zapisac do slownika
 
-
-
-
-
-
-
-
+data_str = "[01/Feb/1998:01:08:39 -0800"
+# data_str.split("/")[1]
+# ata_str.split("/")[2][:4] pobranie pierwszych czerech elementow
 
 
 
