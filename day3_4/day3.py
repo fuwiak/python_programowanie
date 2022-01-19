@@ -114,7 +114,7 @@ def maks3(a,b,c):
 
     elif (a==b) and (a==c) and (b==c):
         print("Rowne")
-        return a
+        maxi = a
     else:
         maxi = c
 
