@@ -73,7 +73,53 @@ def powieksz_o_jeden(a,b,c):
 
 #zad1 napisac funkcje, ktora znaduje wieksza z dwoch podanych argumentow
 
+def maksi(a,b):
+    if a > b:
+        return a
+    elif b > a:
+        return b
+    else:
+        return "sa rowne"
+
+
+
 #zad2, to samo, tylko dla 3 argumentow
+
+#to samo dla 3 argumentów
+# def wieksza_z_3 (a,b,c):
+#     if a>b:
+#         if a>c:
+#             return a
+#         elif c>a:
+#             return c
+#         else:
+#             return "a i c są równe"
+#     elif b>a:
+#         if b>c:
+#             return b
+#         elif c>b:
+#             return c
+#         else:
+#             return "b i c są równe"
+#     else:
+#         return "sa równe"
+
+
+def maks3(a,b,c):
+
+    if (a>b) and (a>c):
+        maxi = a
+    elif (b>a) and (b>c):
+        maxi = b
+
+    elif (a==b) and (a==c) and (b==c):
+        print("Rowne")
+        return a
+    else:
+        maxi = c
+
+    return maxi
+
 
 
 
