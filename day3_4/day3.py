@@ -125,8 +125,7 @@ def maks3(a,b,c):
 
 
 def suma_elemntow(*x): #przyjmij nieskonczona liczbe parametrow
-    return sum(*x) # odpakuj elementy z listy i je zsumuj
-
+    return sum(x) # odpakuj elementy z listy i je zsumuj
 
 # suma_elemntow([1,2])
 
