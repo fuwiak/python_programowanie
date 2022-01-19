@@ -196,7 +196,7 @@ for linia in dane_logi:
     # print(linia2)
     dane_po_obrobce.append(linia2)
 
-print_new_line(dane_po_obrobce)
+# print_new_line(dane_po_obrobce)
 
 
 separate_ip_network = [linia.split(" ") for linia in dane_po_obrobce]
@@ -210,6 +210,9 @@ def add_row(nazwy_kolumn,wartosci):
         wiersz_baza_danych2[col] = wartosci[ind]
     return wiersz_baza_danych2
 
+
+# add_row(nazwy_kolumn,wartosci)
+
 #zadanie bojowe, wyciagnac takie dane jak: data w formacie dzien/miesiac/rok oraz slowo get
 #rezulat zapisac do slownika
 
@@ -219,11 +222,27 @@ data_str = "[01/Feb/1998:01:08:39 -0800"
 
 
 
+#tym sposobem wyluskujemy date i get z pliku
+dane_po_obrobce2=[]
+for linia in dane_logi:
+    linia=linia.strip("\n")
+    linia=linia.split(" ")
+    linia2=((str(linia[3])[1:12])+" "+(str(linia[5])[1:5]))
+    dane_po_obrobce2.append(linia2)
+# print_new_line(dane_po_obrobce2)
 
+#tutaj zapiszemy rezultat do slownika
+separate_date_location = [linia.split(" ") for linia in dane_po_obrobce2]
+nazwy_kolumn1 = ["row1", "row2"]
+wartosci=separate_date_location
 
+def add_row(nazwy_kolumn1,wartosci):
+    wiersze_baza_danych2 = {}
+    for ind, col in enumerate(nazwy_kolumn1):
+        wiersze_baza_danych2[col]=wartosci[ind]
+    return wiersze_baza_danych2
 
-
-
+# add_row(nazwy_kolumn,wartosci)
 
 
 
