@@ -152,14 +152,15 @@ def foo2(x):
 def foo3(**x):
     """
     jesli chcesz przekazac slownik, zrob nastepujaco
+
     #1 sposob
     slownik = {"pawel":1, "maja":2}
     foo3(**slownik)
+
     #2 sposob
     foo3(pawel=1, maja=2, kamil=3)
 
     """
-
 
 
     return x
@@ -172,6 +173,32 @@ slownik = {"pawel":1, "maja":2}
 
 
 foo3(**slownik)
+
+# parsowanie(wyciaganie danych z pliku)
+
+path = "C:\\Users\\stasi\\Documents\\GitHub\\python_programowanie\\dane\\sample_log.txt"
+
+dane_logi = open(path, "r").readlines()
+
+
+#pobbrac z kazdej linii ip, oraz slowo home lub away, mozna rodzielic elementy za pomoca funlcki split
+#rezulata zapisac do nowej listy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
