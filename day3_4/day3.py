@@ -143,7 +143,84 @@ def proste_statystyki(*liczby):
 
 #zadanie bojowe, przerobic funkcje proste statystki, zeby wzracala slownik
 #klucze: max, min, suma, srednia
+#slownik = {}
 #slownik["max"]
+
+
+def proste_statystyki2(*liczby):
+    maxi=max(liczby)
+    mini=min(liczby)
+    suma=sum(liczby)
+    srednia=suma/len(liczby)
+
+    slownik = {}
+    slownik['maxi'] = maxi
+    slownik['mini'] = mini
+    slownik['suma'] = suma
+    slownik['srednia'] = srednia
+
+    return slownik
+
+#slowniki powtorka
+
+wiersz_baza_danych = {}
+
+wiersz_baza_danych["numer_telefonu"]=888111222
+
+wiersz_baza_danych["miasta"] = "Sosnowiec", "Grojec"
+
+#zmienmy wartosc grojec na radom
+
+wiersz_baza_danych["miasta"] =wiersz_baza_danych["miasta"][0], "Radom"
+
+wiersz_baza_danych["stanowisko"]="programista"
+
+# wiersz_baza_danych["narodowosc"]="polska"
+
+
+# nazwa_kolumny = input("Nazwa kolumny ")
+# narodowosc = input("Podaj narodowosc ")
+#
+# wiersz_baza_danych[nazwa_kolumny]=narodowosc
+
+
+
+baza_danych = []
+baza_danych.append(wiersz_baza_danych)
+
+
+wiersz_baza_danych2 = {}
+nazwy_kolumn = ["numer_telefonu", "miasto", "fujarka"]
+wartosci = [9999, "radom", 20]
+
+
+#tworzymy linie w bazie(po prostu to jest slownik, natomiast baza danych to wiele slownikow w liscie
+def add_row(nazwy_kolumn,wartosci):
+    wiersz_baza_danych2 = {}
+    for ind, col in enumerate(nazwy_kolumn):
+        wiersz_baza_danych2[col] = wartosci[ind]
+    return wiersz_baza_danych2
+
+for i in range(10):
+    nazwy_kolumn = ["numer_telefonu", "miasto", "fujarka"]
+    wartosci = [random.randint(1000000, 20000000), "radom"+str(i), 20+random.randint(9, 22)]
+    row = add_row(nazwy_kolumn,wartosci)
+    baza_danych.append(row)
+
+print(baza_danych)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
