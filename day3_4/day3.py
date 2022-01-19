@@ -247,10 +247,9 @@ baza= add_row(nazwy_kolumn,wartosci)
 print("zapisana baza", baza)
 
 
+# \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} znajdujemy IP
 
-
-
-
+# \d{2}/\w{3}/\d{4} znajdujemy date
 
 
 
