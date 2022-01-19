@@ -134,7 +134,7 @@ def pokaz_argumenty(*x):
 
 # pokaz_argumenty(9,1,2)
 
-def proste_statystyki(*liczby):
+def proste_statystyki1(*liczby):
     maxi = max(liczby)
     mini = min(liczby)
     suma = sum(liczby)
@@ -213,6 +213,7 @@ for i in range(10):
 #pokazywanie rezulatu funkcji, pobierajac "x" od uzytkownika
 
 # def foo(x):
+
 #     return 2*x
 #
 # x = int(input("Podaj liczbe"))
@@ -229,15 +230,22 @@ slownik = {"ip":1, "passw":2,"xyz": 3, "abc":4}
 
 #uzywam funkcji print_new_line z pliku biblioteka
 
-from biblioteka import print_new_line
+from biblioteka import print_new_line, name1, name2
 
 print_new_line(lista)
 
 
+#przeniesc fukcje proste_statyski i proste_statyki do pliku biblioteka
+#a nasteonie wydrukowac ich rezulaty dla listy = [1,2,3,4]
 
 
 
+#wiele wartosci z input
 
+# wynik = []
+# for i in range(3):
+#     x = input("Podaj cyfre")
+#     wynik.append(x)
 
 
 
