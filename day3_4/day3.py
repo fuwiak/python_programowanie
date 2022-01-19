@@ -242,8 +242,9 @@ def add_row(nazwy_kolumn1,wartosci):
         wiersze_baza_danych2[col]=wartosci[ind]
     return wiersze_baza_danych2
 
-# add_row(nazwy_kolumn,wartosci)
+baza= add_row(nazwy_kolumn,wartosci)
 
+print("zapisana baza", baza)
 
 
 
