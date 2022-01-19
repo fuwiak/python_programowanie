@@ -242,7 +242,7 @@ def add_row(nazwy_kolumn1,wartosci):
         wiersze_baza_danych2[col]=wartosci[ind]
     return wiersze_baza_danych2
 
-baza= add_row(nazwy_kolumn,wartosci)
+# baza= add_row(nazwy_kolumn1,wartosci)
 
 # print("zapisana baza", baza)
 
@@ -261,12 +261,46 @@ ip = re.findall("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", pierwszy_wiersz)
 
 #pokaz wszystkie ip z listy dane logi
 
+# for wiersz in dane_logi:
+#     ip = re.findall("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", wiersz)
+#     print("znalezione IP", ip)
+
+
+#uzywajac regexow, zapisac do listy list - date oraz slowo GET z listy dane_logi
+
+# print(dane_logi)
+dane_logi2 = []
 for wiersz in dane_logi:
-    ip = re.findall("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", wiersz)
-    print("znalezione IP", ip)
+    get = re.findall("GET", wiersz)
+    # print("Znalezione IP", get)
+    data = re.findall("\d{2}\/\w{3}\/\d{4}", wiersz)
+    # print("Znaleziona data", data)
+    dane_logi2.append(data+get)
+
+# print_new_line(dane_logi2)
+
+#bardziej kompaktowa wersja kodu
+
+def extract_patterns(text, regex):
+    matches = re.findall(regex, text)
+    return matches
 
 
-#uzywajac regexow, zapisac do listy list - date oraz slowo GET
+# print("znalezione wyrazenia", extract_patterns(wiersz, "\d{2}\/\w{3}\/\d{4}|GET"))
+
+def for_all_lines(logi):
+    """
+    znajdz dla calego logu/pliku
+    """
+    all_rows = []
+    for line in logi:
+        row = str(line)
+        row = extract_patterns(row, "\d{2}\/\w{3}\/\d{4}|GET")
+        all_rows.append(row)
+    return all_rows
+
+
+print_new_line(for_all_lines(dane_logi2))
 
 
 
