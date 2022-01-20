@@ -1,4 +1,5 @@
 from biblioteka import print_new_line
+import re
 
 path_old = r"""C:\Users\stasi\Dropbox\Komputer\Downloads\nowy_log.txt"""
 
@@ -7,38 +8,6 @@ def change_path_to_windows(path):
     return new_path
 
 path = change_path_to_windows(path_old)
-# dane = open(path, "r").readlines()
-# print_new_line(dane)
-
-list_of_list = [['127.222.333.123'], ['127.222.333.123'], ['111.222.333.123']]
-
-#stuczka jak splaszczyc liste list
-
-fiatten = sum(list_of_list, [])
-unique = set(fiatten)
-
-
-#znalez unikalne IP w pliku nowy_log.txt
-#do znalezenia IP, uzyjmy regexa ze wczoraj, znalezione regexy beda znajdowaly sie liscie
-#zeby znalezc unikalne IP, zamien liste na zbior(set)
-#na koniec rezulat zapisz do pliku o nazwie unikalne_ip.txt
-
-# help(set)
-# dir(set)
-
-def parse_log(regex, input_file_name, output_name):
-    pass
-
-
-# dane = open(path, "r").readlines()'
-
-
-
-path = r"""C:\\Users\\stasi\\Dropbox\\Komputer\\Downloads\\nowy_log.txt"""
-
-dane = open(path, "r").readlines()
-print_new_line(dane)
-
 
 #znalez unikalne IP w pliku nowy_log.txt
 #do znalezenia IP, uzyjmy regexa ze wczoraj, znalezione regexy beda znajdowaly sie liscie
@@ -48,15 +17,20 @@ print_new_line(dane)
 #dir(set)
 #help(set)
 
-def foo(regex, input_file_name, output_name):
 
 
+regex = r"""\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"""
+
+def parse_log(regex, input_file_name, output_name):
+    list_out = []
+    dane = open(input_file_name, "r").readlines()
+    for row in dane:
+        ip = re.findall(regex, row)
+        list_out.extend(ip)
+    out = list(set(list_out))
+    with open(output_name, "w") as f:
+
+        f.write(str(out))
 
 
-
-
-
-
-
-
-# dane = open(path, "r").readlines()
+parse_log(regex, path, "unikalne_ip.txt")
