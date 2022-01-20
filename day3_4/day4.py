@@ -117,10 +117,20 @@ finally:
 #zadanie wyciagnac dla kazdej linia IP z lowy_logt.txt i drukowac tylko wiersze zaczynajacde od ip 127
 #dla ip ktore nie zaczynaja od 127, dac komunikat "access denied"
 
-# def not127(linia):
-#     if not linia[:3]=='127':
-#         raise AssertionError("access denied")
-#     return linia
+
+def not127(linia):
+    if not linia[:3]=='127':
+        raise AssertionError("access denied")
+    return linia
+
+dane = open(path,"r").readlines()
+for x in dane:
+    try:
+
+        print(not127(x))
+    except Exception as e:
+        print(e)
+        # print("Access denied")
 
 
 
