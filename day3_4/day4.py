@@ -322,3 +322,5 @@ import requests
 url = "https://jsystems.pl/Universe/samaTabelka.do"
 response = requests.get(url)
 data = response.json()
+
+print_new_line(data)
