@@ -314,5 +314,11 @@ print("czy w1==w2", w1==w2)
 
 
 
+#get post - praca z danymi z internetu
 
 
+import requests
+
+url = "https://jsystems.pl/Universe/samaTabelka.do"
+response = requests.get(url)
+data = response.json()
