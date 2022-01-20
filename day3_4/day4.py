@@ -137,4 +137,22 @@ for x in dane:
         # print("Access denied")
 
 
+#kolejne zadanko
+# pokazac tylko, gdzie jest polaczenie https, jesli nie, to dac komunikat(rzucamu wyjatkiem) "niebezpieczne polaczenie"
+
+
+def notsafe(linia):
+    if "https" not in linia:
+        raise AssertionError("niebezpieczne połączenie")
+    return linia
+
+dane = open(path, "r").readlines()
+for x in dane:
+    try:
+        print(notsafe(x))
+    except Exception as e:
+        print(e)
+
+
+
 
