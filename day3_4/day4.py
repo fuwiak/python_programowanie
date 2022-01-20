@@ -328,7 +328,7 @@ def print_new_line(lista):
         print(line, end="\n")
 
 
-print_new_line(data)
+# print_new_line(data)
 
 #zeby pobrac zasob ktorego ruch jest szyfrowany, czasem trzeba uzyc nastepujacyh linii
 # import requests
@@ -350,3 +350,20 @@ import re
 
 URL = "https://www.tekstowo.pl/piosenki_artysty,bracia_figo_fagot.html"
 page = urllib.request.urlopen(URL)
+
+soup = BeautifulSoup(page) #zawartosc strone znajduje sie w zupie
+# print("zupa",soup)
+
+#wyluskanie danych z div box przeboje
+
+songs_all_data = soup.body.findAll('div', attrs={'class' : 'ranking-lista'})
+
+# print("temp", songs_all_data)
+
+
+#pobierzmy nnazwe piuerwszej piosenki
+# songs_all_data[0].a.get('title')
+
+lista_piosenek = songs_all_data[0].findAll('a', attrs={'class' : 'title'})
+print("lista piosenek ", lista_piosenek)
+
