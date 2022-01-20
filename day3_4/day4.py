@@ -171,19 +171,100 @@ ania = Uczen("Ania", "Kowalska", 1)
 
 bobek = Uczen("Robert", "Lewandowski", 99)
 
-print(ania.przedstaw_sie()) #pierwszy egzemplarz Ucznia
-
-print(bobek.przedstaw_sie()) #drugi egzemplarz Ucznia
+# print(ania.przedstaw_sie()) #pierwszy egzemplarz Ucznia
+#
+# print(bobek.przedstaw_sie()) #drugi egzemplarz Ucznia
 
 # print("Imie ", ania.name)
 # print("Nazwisko ", ania.surname)
 # print("klasa ", ania.level)
 
 
+#stworzmy klase prostokat, ktora przyjmuje 2 parametry, a i b
+#nastepnie stworzyc 2 funkcje w klasie, pole_prostokata i obwod prostokata
+#ktore zwracaja wartosci pola i jak obwodu
+#stworzyc 2 instancje(wystapienia) klasy prostokat(prostiej stworz 2 prostokaty o roznych dlugosciach boku)
+
+class Prostokat:
+    #wlaściwości
+    def __init__(self, bok_a, bok_b):
+        self.bok_a = bok_a
+        self.bok_b = bok_b
+
+    def pole_prostokata(self):
+        return "Pole prostokąta wynosi {}".format(self.bok_a * self.bok_b)
+    def obwod_prostokata(self):
+        return "Obwod prostokata wynosi {}".format(self.bok_a*2 + self.bok_b*2)
+
+
+
+# print(prostokat1.pole_prostokata())
+# print(prostokat1.obwod_prostokata())
+# print(prostokat2.pole_prostokata())
+# print(prostokat2.obwod_prostokata())
+# print(prostokat3.pole_prostokata())
+# print(prostokat3.obwod_prostokata())
+#
 
 
 
 
+class Prostokat:
+    #wlaściwości
+
+    #own special methods
+
+    def __init__(self, bok_a, bok_b, nazwa_zmiennej):
+        self.bok_a = bok_a
+        self.bok_b = bok_b
+        self.nazwa_zmiennej = nazwa_zmiennej
+
+    def __add__(self, other):
+        return self.bok_a*self.bok_b + other.bok_a*other.bok_b
+
+    def __str__(self): #print ladnie wyswietlenie
+        return "{} o bokach o dlugosci {} {}".format(self.nazwa_zmiennej, self.bok_a, self.bok_b)
+
+    def __repr__(self): #ladnie wyswietlenie w konsoli
+        return "{} o bokach o dlugosci {} {}".format(self.nazwa_zmiennej, self.bok_a, self.bok_b)
+
+
+
+    def pole_prostokata(self):
+        return "Pole prostokąta wynosi {}".format(self.bok_a * self.bok_b)
+    def obwod_prostokata(self):
+        return "Obwod prostokata wynosi {}".format(self.bok_a*2 + self.bok_b*2)
+
+prostokat1 = Prostokat(10,20, "prostokat1")
+prostokat2 = Prostokat(10,50, "prostokat2")
+prostokat3 = Prostokat(30,45, "prostokat3")
+
+
+# print("Dodaj do siebie dwa prostokaty", prostokat1+prostokat3)
+
+
+
+# print(prostokat1)
+
+
+#klasa wektor2d
+
+class wektor2d:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+#uzupelnic funkcjonalnosc klasy wektor o nastepujace szczegoly:
+
+
+#reprezentacja tekstowa __repr__ ----> po wpisaniu w konsole w1, chce dostac komunikat wektor =(x,y)
+##reprezentacja dla printa __str__ ----> po wpisaniu w konsole pringt(w1), chce dostac komunikat wektor =(x,y)
+#dodawanie __add__
+#odejmowanie __sub__
+#mnozenie __mul__
+#wartosc bezwzgledna __abs__
+#znak rownosci, __eq__  w1==w2 --> True
 
 
 
