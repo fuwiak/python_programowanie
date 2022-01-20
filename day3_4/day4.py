@@ -290,13 +290,13 @@ w3 = wektor2d(2, 5)
 # print(w2)
 #print(abs(w1))
 
-print("suma w1 oraz w2 " ,w1+w2)
-print("roznica w1 oraz w2 ", w1-w2)
-print("Iloczyn wektorow w1 oraz w2", w1*w2)
-print("wartosc bezwzgledna w1", abs(w1))
-
-print("czy w1==w3", w1==w3)
-print("czy w1==w2", w1==w2)
+# print("suma w1 oraz w2 " ,w1+w2)
+# print("roznica w1 oraz w2 ", w1-w2)
+# print("Iloczyn wektorow w1 oraz w2", w1*w2)
+# print("wartosc bezwzgledna w1", abs(w1))
+#
+# print("czy w1==w3", w1==w3)
+# print("czy w1==w2", w1==w2)
 
 #uzupelnic funkcjonalnosc klasy wektor o nastepujace szczegoly:
 
@@ -321,6 +321,32 @@ import requests
 
 url = "https://jsystems.pl/Universe/samaTabelka.do"
 response = requests.get(url)
-data = response.json()
+data = response.json() #zamiana odpowiedzi na slownik
+
+def print_new_line(lista):
+    for line in lista:
+        print(line, end="\n")
+
 
 print_new_line(data)
+
+#zeby pobrac zasob ktorego ruch jest szyfrowany, czasem trzeba uzyc nastepujacyh linii
+# import requests
+# requests.get('web.com', verify=False)
+# session = requests.Session()
+# session.verify = False
+# session.post(url='https://example.com', data={'bar':'baz'})
+
+# import ssl
+#
+# ssl._create_default_https_context = ssl._create_unverified_context
+
+#pobieramy dane z strony hmtl
+
+
+import urllib.request
+from bs4 import BeautifulSoup
+import re
+
+URL = "https://www.tekstowo.pl/piosenki_artysty,bracia_figo_fagot.html"
+page = urllib.request.urlopen(URL)
