@@ -264,6 +264,17 @@ class wektor2d:
     def __sub__(self, other):
         return "Różnica wektorów  ({},{})".format(self.x-other.x, self.y-other.y)
 
+    def __mul__(self, other): #iloczyn x1*x2, y1*y2
+        return "Iloczyn wektorow  {} {}".format(self.x*other.x, self.y*other.y)
+
+    def __abs__(self):
+        return "Wartość bezwzględna wektorów {}".format((self.x**2 + self.y**2)**0.5)
+
+
+
+
+
+
 w1 = wektor2d(2, 5)
 w2 = wektor2d(4, 8)
 
@@ -273,6 +284,9 @@ w2 = wektor2d(4, 8)
 
 print("suma w1 oraz w2 " ,w1+w2)
 print("roznica w1 oraz w2 ", w1-w2)
+print("Iloczyn wektorow w1 oraz w2", w1*w2)
+print("wartosc bezwzgledna w1", abs(w1))
+
 #uzupelnic funkcjonalnosc klasy wektor o nastepujace szczegoly:
 
 
@@ -281,13 +295,8 @@ print("roznica w1 oraz w2 ", w1-w2)
 
 #dodawanie __add__
 #odejmowanie __sub__
-
-
-
-#mnozenie __mul__ suma(x1*x2+y1*y2) __mul__
-
-#wartosc bezwzgledna __abs__ math.sqrt(x**2+y**2)
-
+# mnozenie __mul__ suma(x1*x2+y1*y2) __mul__
+# wartosc bezwzgledna __abs__ math.sqrt(x**2+y**2)
 
 
 #znak rownosci, __eq__  w1==w2 --> True
