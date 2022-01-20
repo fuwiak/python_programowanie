@@ -18,7 +18,6 @@ path = change_path_to_windows(path_old)
 #help(set)
 
 
-
 regex = r"""\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"""
 
 def parse_log(regex, input_file_name, output_name):
@@ -32,5 +31,11 @@ def parse_log(regex, input_file_name, output_name):
 
         f.write(str(out))
 
+    # with open(output_name, "w") as f:
+    #     for element in out:
+    #         f.write(str(element)+'\n') #kazdy element listy w nowym wierszu
+
 
 parse_log(regex, path, "unikalne_ip.txt")
+
+
