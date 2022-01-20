@@ -30,7 +30,7 @@ def parse_log(regex, input_file_name, output_name):
     out = list(set(list_out))
 
     ile_systemow = len(out)
-    print("Liczba roznych systemow", ile_systemow)
+    # print("Liczba roznych systemow", ile_systemow)
 
 
     # with open(output_name, "w") as f:
@@ -103,14 +103,14 @@ lista = [2, 1, "pawel", 7, "lukasz"]
 
 #jesli byc pewni, ze wszystkie elementy podzielone(w ogolnosci zostal kod pomiedzy try a except i wykonane
 #wszystkie sytuacje specjalne, uzyjmy do tego slowa kluczowego finally
-try:
-
-    for x in lista:
-        print(x/2)
-except Exception as e:
-    print(e)
-finally:
-    print("wszystkie elementy podzielone")
+# try:
+#
+#     for x in lista:
+#         print(x/2)
+# except Exception as e:
+#     print(e)
+# finally:
+#     print("wszystkie elementy podzielone")
 
 
 
@@ -118,40 +118,72 @@ finally:
 #dla ip ktore nie zaczynaja od 127, dac komunikat "access denied"
 
 
-def not127(linia):
-    if not linia[:3]=='127': # tu dzialanie jesli nastapi jakis blad/wyjatek
-        raise AssertionError("access denied")
+# def not127(linia):
+#     if not linia[:3]=='127': # tu dzialanie jesli nastapi jakis blad/wyjatek
+#         raise AssertionError("access denied")
+#
+#     #w nastepnych liniach mozemy zdefiniowac dzialania jakie wykonujemu, jesli bledy czy
+#     #wyjatki nie nastapily
+#
+#     return linia
 
-    #w nastepnych liniach mozemy zdefiniowac dzialania jakie wykonujemu, jesli bledy czy
-    #wyjatki nie nastapily
-
-    return linia
-
-dane = open(path,"r").readlines()
-for x in dane:
-    try:
-
-        print(not127(x))
-    except Exception as e:
-        print(e)
-        # print("Access denied")
+# dane = open(path,"r").readlines()
+# for x in dane:
+#     try:
+#
+#         print(not127(x))
+#     except Exception as e:
+#         print(e)
+#         # print("Access denied")
 
 
 #kolejne zadanko
 # pokazac tylko, gdzie jest polaczenie https, jesli nie, to dac komunikat(rzucamu wyjatkiem) "niebezpieczne polaczenie"
 
 
-def notsafe(linia):
-    if "https" not in linia:
-        raise AssertionError("niebezpieczne połączenie")
-    return linia
+# def notsafe(linia):
+#     if "https" not in linia:
+#         raise AssertionError("niebezpieczne połączenie")
+#     return linia
+#
+# dane = open(path, "r").readlines()
+# for x in dane:
+#     try:
+#         print(notsafe(x))
+#     except Exception as e:
+#         print(e)
 
-dane = open(path, "r").readlines()
-for x in dane:
-    try:
-        print(notsafe(x))
-    except Exception as e:
-        print(e)
+
+
+
+#wstep do klas
+
+class Uczen:
+    def __init__(self, name, surname, level):
+        self.name = name
+        self.surname = surname
+        self.level = level
+
+    def przedstaw_sie(self):
+        return "Nazywam sie {} {} i chodze do klasy nr {}".format(self.name, self.surname, self.level)
+
+ania = Uczen("Ania", "Kowalska", 1)
+
+bobek = Uczen("Robert", "Lewandowski", 99)
+
+print(ania.przedstaw_sie()) #pierwszy egzemplarz Ucznia
+
+print(bobek.przedstaw_sie()) #drugi egzemplarz Ucznia
+
+# print("Imie ", ania.name)
+# print("Nazwisko ", ania.surname)
+# print("klasa ", ania.level)
+
+
+
+
+
+
 
 
 
