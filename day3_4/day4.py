@@ -253,19 +253,62 @@ class wektor2d:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+    def __str__(self): #print
+        return "({} , {})".format(self.x, self.y)
+    def __repr__(self): #widok w konsoli
+        return "({} , {})".format(self.x, self.y)
 
+    def __add__(self, other):
+        return "Suma wektorów  ({},{})".format(self.x+other.x, self.y+other.y)
 
+    def __sub__(self, other):
+        return "Różnica wektorów  ({},{})".format(self.x-other.x, self.y-other.y)
+
+w1 = wektor2d(2, 5)
+w2 = wektor2d(4, 8)
+
+# print(w1)
+# print(w2)
+#print(abs(w1))
+
+print("suma w1 oraz w2 " ,w1+w2)
+print("roznica w1 oraz w2 ", w1-w2)
 #uzupelnic funkcjonalnosc klasy wektor o nastepujace szczegoly:
 
 
 #reprezentacja tekstowa __repr__ ----> po wpisaniu w konsole w1, chce dostac komunikat wektor =(x,y)
 ##reprezentacja dla printa __str__ ----> po wpisaniu w konsole pringt(w1), chce dostac komunikat wektor =(x,y)
+
 #dodawanie __add__
 #odejmowanie __sub__
-#mnozenie __mul__
-#wartosc bezwzgledna __abs__
+
+
+
+#mnozenie __mul__ suma(x1*x2+y1*y2) __mul__
+
+#wartosc bezwzgledna __abs__ math.sqrt(x**2+y**2)
+
+
+
 #znak rownosci, __eq__  w1==w2 --> True
 
 
 
 
+# class wektor2d:
+#     def __init__(self, x, y):
+#         self.x=x
+#         self.y=y
+#     def __add__(self, other):
+#         return "Suma wektorów  ({},{})".format(self.x+other.x, self.y+other.y)
+#     def __sub__(self, other):
+#         return "Różnica wektorów  ({},{})".format(self.x-other.x, self.y-other.y)
+#     def __mul__(self, other):
+#         return "Iloczyn wektorów  ({},{})".format(self.x*other.y, self.y*other.x)
+#     def __abs__(self, other):
+#         return "Wartość bezwzględna wektorów  ({},{})".format((self.x*self.x+self.y*self.y)**0.5)
+#     def __str__(self):
+#         return "Wektor = ({},{})".format(self.x, self.y)
+#     #widok w konsoli
+#     def __repr__(self):
+#         return "Wektor = ({},{})".format(self.x, self.y)
