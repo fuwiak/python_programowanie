@@ -249,6 +249,10 @@ prostokat3 = Prostokat(30,45, "prostokat3")
 
 #klasa wektor2d
 
+import math
+
+
+
 class wektor2d:
     def __init__(self, x, y):
         self.x = x
@@ -270,13 +274,17 @@ class wektor2d:
     def __abs__(self):
         return "Wartość bezwzględna wektorów {}".format((self.x**2 + self.y**2)**0.5)
 
-
-
-
+    def __eq__(self, other):
+        if (self.x == other.x) and (self.y == other.y):
+            return "Wektory są równe"
+        else:
+            return "Wektory nie są równe"
 
 
 w1 = wektor2d(2, 5)
 w2 = wektor2d(4, 8)
+w3 = wektor2d(2, 5)
+
 
 # print(w1)
 # print(w2)
@@ -286,6 +294,9 @@ print("suma w1 oraz w2 " ,w1+w2)
 print("roznica w1 oraz w2 ", w1-w2)
 print("Iloczyn wektorow w1 oraz w2", w1*w2)
 print("wartosc bezwzgledna w1", abs(w1))
+
+print("czy w1==w3", w1==w3)
+print("czy w1==w2", w1==w2)
 
 #uzupelnic funkcjonalnosc klasy wektor o nastepujace szczegoly:
 
@@ -304,20 +315,4 @@ print("wartosc bezwzgledna w1", abs(w1))
 
 
 
-# class wektor2d:
-#     def __init__(self, x, y):
-#         self.x=x
-#         self.y=y
-#     def __add__(self, other):
-#         return "Suma wektorów  ({},{})".format(self.x+other.x, self.y+other.y)
-#     def __sub__(self, other):
-#         return "Różnica wektorów  ({},{})".format(self.x-other.x, self.y-other.y)
-#     def __mul__(self, other):
-#         return "Iloczyn wektorów  ({},{})".format(self.x*other.y, self.y*other.x)
-#     def __abs__(self, other):
-#         return "Wartość bezwzględna wektorów  ({},{})".format((self.x*self.x+self.y*self.y)**0.5)
-#     def __str__(self):
-#         return "Wektor = ({},{})".format(self.x, self.y)
-#     #widok w konsoli
-#     def __repr__(self):
-#         return "Wektor = ({},{})".format(self.x, self.y)
+
