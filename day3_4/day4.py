@@ -119,8 +119,12 @@ finally:
 
 
 def not127(linia):
-    if not linia[:3]=='127':
+    if not linia[:3]=='127': # tu dzialanie jesli nastapi jakis blad/wyjatek
         raise AssertionError("access denied")
+
+    #w nastepnych liniach mozemy zdefiniowac dzialania jakie wykonujemu, jesli bledy czy
+    #wyjatki nie nastapily
+
     return linia
 
 dane = open(path,"r").readlines()
@@ -131,9 +135,6 @@ for x in dane:
     except Exception as e:
         print(e)
         # print("Access denied")
-
-
-
 
 
 
