@@ -215,8 +215,22 @@ for tupla in przechwyc_dane:
 
 
 #zapisujemy re
-with open("ouput_db.txt", "w") as f:
+with open("output_db.txt", "w") as f:
     for element in nowy_output:
         f.write(str(element)+'\n') #kazdy element listy w nowym wierszu
+
+
+#usuwanie wierszy i aktualizowanie tabeli
+
+#pobrac wiersze z pliku output_db.txt, usunac z niego ostatnie 2 dwa WIERSZEie i zaklualizowac
+#wartosc moje telefony, pamietajcie teraz elementu cena
+
+pierwsze3= tuple([tupla[0], tupla[1], tupla[2])
+
+
+
+
+
+
 
 
