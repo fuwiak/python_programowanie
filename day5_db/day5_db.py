@@ -1,4 +1,4 @@
-import psycopg2
+mport psycopg2
 import random
 
 from my_functions import bulkInsert, deleteData, updateTable
@@ -37,13 +37,33 @@ connection = psycopg2.connect(**conn_data)
 #
 #create table(C)
 cursor = connection.cursor()
-create_table_query = '''CREATE TABLE IF NOT EXISTS mobile3
-          (ID INT PRIMARY KEY     NOT NULL,
-          MODEL           TEXT    NOT NULL,
-          PRICE         FLOAT); '''
-# # Execute a command: this creates a new table
-cursor.execute(create_table_query)
+# create_table_query = '''CREATE TABLE IF NOT EXISTS mobile4
+#           (ID INT PRIMARY KEY     NOT NULL,
+#           MODEL           TEXT    NOT NULL,
+#           PRICE         FLOAT); '''
+# # # Execute a command: this creates a new table
+# cursor.execute(create_table_query)
+# connection.commit()
+#
+# print("Potwierdzenie, ze prawidlowo polaczylismy sie z baza danych", connection)
+# print("Table created successfully in PostgreSQL ")
+
+#\dt - podejrzenie jaka stworzylismy tabele
+#
+#
+# # # Executing a SQL query to insert data into  table mobile2
+# model_list = ["Xiaomi", "Iphone", "Motorola", "Nokia"]
+#
+#
+# #insert one line
+
+# insert_query = """ INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES (1, 'Iphone12', 1100)"""
+# cursor.execute(insert_query)
+# connection.commit()
+
+insert_query = """ INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES (2, 'Iphone1333', 99999)"""
+cursor.execute(insert_query)
 connection.commit()
 
-print("Potwierdzenie, ze prawidlowo polaczylismy sie z baza danych", connection)
-print("Table created successfully in PostgreSQL ")
+
+#select * from mobile2; --> sprawdzic w tabeli mobile2
