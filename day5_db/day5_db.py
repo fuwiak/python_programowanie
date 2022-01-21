@@ -19,3 +19,9 @@ conn_data = {
 }
 
 connection = psycopg2.connect(**conn_data)
+
+cursor = connection.cursor()
+create_table_query = '''CREATE TABLE IF NOT EXISTS mobile2
+          (ID INT PRIMARY KEY     NOT NULL,
+          MODEL           TEXT    NOT NULL,
+          PRICE         FLOAT); '''
