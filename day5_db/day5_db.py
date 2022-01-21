@@ -164,9 +164,33 @@ cursor = connection.cursor()
 #wygerowac liste  krotek o nazwie telefony_lista, w ktorej bedzie piec wierszy
 #w kazdym wierszu(krotce) maja sie znalezc 3 elementy - id, model, rocznik
 
-for i in
 
-[(1, 'ajfon', 2011), ]
 #nastepnie telefony_lista zapisac to tabeli moje_telefony(pamietamy o tym, ze tabele
 # telefony nalezy utworzyc w bazie test22
+
+telefony_lista = []
+for i in range(5):
+    krotka = [(i+1, 'ajfon'+str(i), 2010 + i) ]
+    telefony_lista.extend(krotka)
+
+create_table_query = '''CREATE TABLE IF NOT EXISTS moje_telefony
+          (ID INT PRIMARY KEY     NOT NULL,
+          MODEL           TEXT    NOT NULL,
+          ROK         INT); '''
+# # Execute a command: this creates a new table
+cursor.execute(create_table_query)
+connection.commit()
+
+values1 = telefony_lista
+
+cursor.executemany("INSERT INTO moje_telefony (ID, MODEL, ROK) VALUES(%s,%s,%s)", values1)
+connection.commit()
+
+
+
+
+
+
+
+
 
