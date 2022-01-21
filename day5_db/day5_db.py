@@ -10,6 +10,7 @@
 
 import psycopg2
 
+#dane do logowania
 conn_data = {
     'user': 'jan',
     'host': '127.0.0.1',
@@ -20,6 +21,7 @@ conn_data = {
 
 connection = psycopg2.connect(**conn_data)
 
+#create table(C)
 cursor = connection.cursor()
 create_table_query = '''CREATE TABLE IF NOT EXISTS mobile2
           (ID INT PRIMARY KEY     NOT NULL,
