@@ -17,3 +17,5 @@ conn_data = {
     'database': 'test22',
     'password': 'pawel123',
 }
+
+connection = psycopg2.connect(**conn_data)
