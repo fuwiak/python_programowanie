@@ -27,3 +27,9 @@ create_table_query = '''CREATE TABLE IF NOT EXISTS mobile2
           (ID INT PRIMARY KEY     NOT NULL,
           MODEL           TEXT    NOT NULL,
           PRICE         FLOAT); '''
+
+
+# # Execute a command: this creates a new table
+cursor.execute(create_table_query)
+connection.commit()
+print("Table created successfully in PostgreSQL ")
