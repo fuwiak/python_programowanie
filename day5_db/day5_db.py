@@ -1,4 +1,4 @@
-mport psycopg2
+import psycopg2
 import random
 
 from my_functions import bulkInsert, deleteData, updateTable
@@ -45,5 +45,5 @@ create_table_query = '''CREATE TABLE IF NOT EXISTS mobile3
 cursor.execute(create_table_query)
 connection.commit()
 
-print("Potwierdzenie, ze prawidlowo polaczylismy sie z baza danych")
+print("Potwierdzenie, ze prawidlowo polaczylismy sie z baza danych", connection)
 print("Table created successfully in PostgreSQL ")
