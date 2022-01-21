@@ -168,23 +168,23 @@ cursor = connection.cursor()
 #nastepnie telefony_lista zapisac to tabeli moje_telefony(pamietamy o tym, ze tabele
 # telefony nalezy utworzyc w bazie test22
 
-telefony_lista = []
-for i in range(5):
-    krotka = [(i+1, 'ajfon'+str(i), 2010 + i) ]
-    telefony_lista.extend(krotka)
-
-create_table_query = '''CREATE TABLE IF NOT EXISTS moje_telefony
-          (ID INT PRIMARY KEY     NOT NULL,
-          MODEL           TEXT    NOT NULL,
-          ROK         INT); '''
-# # Execute a command: this creates a new table
-cursor.execute(create_table_query)
-connection.commit()
-
-values1 = telefony_lista
-
-cursor.executemany("INSERT INTO moje_telefony (ID, MODEL, ROK) VALUES(%s,%s,%s)", values1)
-connection.commit()
+# telefony_lista = []
+# for i in range(5):
+#     krotka = [(i+1, 'ajfon'+str(i), 2010 + i) ]
+#     telefony_lista.extend(krotka)
+#
+# create_table_query = '''CREATE TABLE IF NOT EXISTS moje_telefony
+#           (ID INT PRIMARY KEY     NOT NULL,
+#           MODEL           TEXT    NOT NULL,
+#           ROK         INT); '''
+# # # Execute a command: this creates a new table
+# cursor.execute(create_table_query)
+# connection.commit()
+#
+# values1 = telefony_lista
+#
+# cursor.executemany("INSERT INTO moje_telefony (ID, MODEL, ROK) VALUES(%s,%s,%s)", values1)
+# connection.commit()
 
 
 #w druga strone,
@@ -196,5 +196,27 @@ connection.commit()
 #(1, 'ajfon', 2020, 30000)
 #(2, 'ajfon', 2020, 50000)
 
+#Rozwiazanie
+#zrzuc rezultat do listy
+cursor.execute("SELECT * FROM moje_telefony")
+przechwyc_dane = cursor.fetchall()
+#
+# print("Result ", przechwyc_dane)
 
-# tuple(list(krotka).append(20000))
+
+nowy_output = []
+#dodajemy kolejny element w krotce
+for tupla in przechwyc_dane:
+    cena = random.randint(1000, 2000)
+
+    linia = tuple([tupla[0], tupla[1], tupla[2], cena])
+    # print("nowa tupla/krotka", linia)
+    nowy_output.append(linia)
+
+
+#zapisujemy re
+with open("ouput_db.txt", "w") as f:
+    for element in nowy_output:
+        f.write(str(element)+'\n') #kazdy element listy w nowym wierszu
+
+
