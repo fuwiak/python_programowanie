@@ -1,7 +1,7 @@
 import psycopg2
 import random
 
-#from my_functions import bulkInsert, deleteData, updateTable
+from my_functions import bulkInsert, deleteData, updateTable
 
 from psycopg2 import Error
 
@@ -61,23 +61,23 @@ cursor = connection.cursor()
 # cursor.execute(insert_query)
 # connection.commit()
 
-insert_query = """ INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES (2, 'Iphone1333', 99999)"""
-cursor.execute(insert_query)
-connection.commit()
+# insert_query = """ INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES (2, 'Iphone1333', 99999)"""
+# cursor.execute(insert_query)
+# connection.commit()
 
 
 #select * from mobile2; --> sprawdzic w tabeli mobile2
 
 #
 #
-insert many lines
+# insert many lines
 
 # list of rows to be inserted
-values = [(17, 'szajomi', 67), (18, 'szajsung', 79), (19, 'majphone', 95)]
-
-# executing the sql statement
-cursor.executemany("INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES(%s,%s,%s)", values)
-connection.commit()
+# values = [(99, 'szajomi', 67), (109, 'szajsung', 79), (180, 'majphone1', 95)]
+#
+# # executing the sql statement
+# cursor.executemany("INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES(%s,%s,%s)", values)
+# connection.commit()
 #
 #
 # #by function
@@ -107,10 +107,16 @@ connection.commit()
 #
 #
 #
-# #update line
-#
-# # update_query = """Update mobile2 set price = 1000 where id = 3"""
-# # cursor.execute(update_query)
+#update line
+
+update_query = """Update mobile2 set price = 2133333 where id = 1"""
+cursor.execute(update_query)
+connection.commit()
+
+
+# select * from mobile2 order by id; wyswietlenie w kolejnosci rosnacej po id
+
+
 #
 #
 # #by function
