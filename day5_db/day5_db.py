@@ -225,12 +225,42 @@ with open("output_db.txt", "w") as f:
 #pobrac wiersze z pliku output_db.txt, usunac z niego ostatnie 2 dwa WIERSZEie i zaklualizowac
 #wartosc moje telefony, pamietajcie teraz elementu cena
 
-pierwsze3= tuple([tupla[0], tupla[1], tupla[2])
+# pierwsze3= tuple([tupla[0], tupla[1], tupla[2])
+
+
+path = "output_db.txt"
+dane_db=open(path, "r").readlines()
+
+remove_bracket_left = [row.lstrip("(") for row in dane_db]
 
 
 
+remove_bracket_right = [row[:-2] for row in remove_bracket_left]
+
+desired_input = [tuple(row.split(",")) for row in  remove_bracket_right]
 
 
 
+#usuwamy dwa wiersze
+desired_input = desired_input[:-2]
+
+#pozbywam ostatniego elementu krotki
+
+desired_without4 = [(row[0], row[1], row[2]) for row in desired_input]
+
+#zamiana stringow na liczby
+
+desired_to_num = [(int(row[0]), row[1], int(row[2].lstrip())) for row in desired_input]
+
+
+#obcinamy wasy przy ajfonie
+
+desired_no_moustache = [(row[0], row[1][2:-1], row[2]) for row in desired_to_num]
+
+print(desired_no_moustache)
+# print(dane_db)
+
+
+#wstawiamy do bazy danych desired_no_moustache
 
 
