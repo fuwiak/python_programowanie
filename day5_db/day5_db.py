@@ -1,4 +1,4 @@
-mport psycopg2
+import psycopg2
 import random
 
 from my_functions import bulkInsert, deleteData, updateTable
@@ -67,3 +67,73 @@ connection.commit()
 
 
 #select * from mobile2; --> sprawdzic w tabeli mobile2
+
+#
+#
+insert many lines
+
+# list of rows to be inserted
+values = [(17, 'szajomi', 67), (18, 'szajsung', 79), (19, 'majphone', 95)]
+
+# executing the sql statement
+cursor.executemany("INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES(%s,%s,%s)", values)
+connection.commit()
+#
+#
+# #by function
+#
+# values = [(17, 'szajomi', 67), (18, 'szajsung', 79), (19, 'majphone', 95)]
+#
+# bulkInsert(values, connection)
+#
+#
+#
+# #generate new_lines
+#
+# # for i in range(1,5):
+# #     id, model, price = i, random.choice(model_list), random.randint(2000,5000)
+# #     insert_query = """INSERT INTO mobile2 (ID, MODEL, PRICE) VALUES ({}, '{}', {})""".format(id, str(model), price)
+# #     cursor.execute(insert_query)
+# #     connection.commit()
+# #     print(insert_query)
+#
+#
+#
+# #zrzuc rezultat do listy
+# # cursor.execute("SELECT * from mobile2")
+# # print("Result ", cursor.fetchall())
+#
+#
+#
+#
+#
+# #update line
+#
+# # update_query = """Update mobile2 set price = 1000 where id = 3"""
+# # cursor.execute(update_query)
+#
+#
+# #by function
+#
+# connection = psycopg2.connect(**conn_data)
+# updateTable(19, 9999, connection)
+#
+#
+# #update from list
+#
+#
+# #deleltion by id
+#
+# # connection = psycopg2.connect(**conn_data)
+# # deleteData(17, connection)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
