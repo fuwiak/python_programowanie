@@ -187,10 +187,14 @@ cursor.executemany("INSERT INTO moje_telefony (ID, MODEL, ROK) VALUES(%s,%s,%s)"
 connection.commit()
 
 
+#w druga strone,
+
+#pobrac wszystkie dane z tabeli moje_telefony, do otrzymanej listy krotek
+#podac kolejny element tzn cena
+# i zapisac rezulat  do pliku txt o nazwie output_db.txt
+#kazda krotka ma byc w nowej linii
+#(1, 'ajfon', 2020, 30000)
+#(2, 'ajfon', 2020, 50000)
 
 
-
-
-
-
-
+# tuple(list(krotka).append(20000))
