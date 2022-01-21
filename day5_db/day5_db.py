@@ -99,9 +99,7 @@ cursor = connection.cursor()
 #
 #
 #
-# #zrzuc rezultat do listy
-# # cursor.execute("SELECT * from mobile2")
-# # print("Result ", cursor.fetchall())
+
 #
 #
 #
@@ -109,9 +107,27 @@ cursor = connection.cursor()
 #
 #update line
 
-update_query = """Update mobile2 set price = 2133333 where id = 1"""
-cursor.execute(update_query)
-connection.commit()
+# update_query = """Update mobile2 set price = 2133333 where id = 1"""
+# cursor.execute(update_query)
+# connection.commit()
+
+
+#delete table
+
+# drop table mobile5; # usun tabele o nazwie mobile5
+
+
+# mobileId = 1
+# deleteData(mobileId, connection)
+
+# mobileId = 2
+# deleteData(mobileId, connection)
+
+
+
+
+
+
 
 
 # select * from mobile2 order by id; wyswietlenie w kolejnosci rosnacej po id
@@ -133,13 +149,24 @@ connection.commit()
 # # connection = psycopg2.connect(**conn_data)
 # # deleteData(17, connection)
 #
+
+
+# #zrzuc rezultat do listy
+# cursor.execute("SELECT * FROM mobile2")
 #
+# przechwyc_dane = cursor.fetchall()
 #
-#
-#
-#
-#
-#
-#
-#
-#
+# print("Result ", przechwyc_dane)
+
+
+#zadania bojowe
+
+#wygerowac liste  krotek o nazwie telefony_lista, w ktorej bedzie piec wierszy
+#w kazdym wierszu(krotce) maja sie znalezc 3 elementy - id, model, rocznik
+
+for i in
+
+[(1, 'ajfon', 2011), ]
+#nastepnie telefony_lista zapisac to tabeli moje_telefony(pamietamy o tym, ze tabele
+# telefony nalezy utworzyc w bazie test22
+
