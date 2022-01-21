@@ -1,7 +1,7 @@
 import psycopg2
 import random
 
-from my_functions import bulkInsert, deleteData, updateTable
+#from my_functions import bulkInsert, deleteData, updateTable
 
 from psycopg2 import Error
 
